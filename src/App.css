@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
 }
-body {
+/* body {
   font-size: 1.2em;
-}
+} */
 .container {
   width: 90%;
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
   /* padding: 10px; */
   margin-left: auto;
   margin-right: auto;
@@ -47,3 +47,15 @@ nav ul li:hover {
 nav ul li a:active {
   color: darkseagreen;
 }
+/* .signin-form {
+  left: 50%;
+  margin-left: -25%;
+  position: absolute;
+  margin-top: -25%;
+} */
+
+/* input {
+  width: 30vw;
+  height: 1.75em;
+  margin: 10px 2px;
+} */
