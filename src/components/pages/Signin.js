@@ -4,10 +4,12 @@ import CustomButon from "./customButton.jsx";
 import "./sign-in.styles.scss";
 import "./custom-button.styles.scss";
 
-function Signin() {
-  const [userInput, setUserInput] = useState({ email: "", password: "" });
+const Signin = () => {
+  const initialSate = { email: "", password: "" };
+  const [userInput, setUserInput] = useState(initialSate);
   const handleSubmit = event => {
     event.preventDefault();
+    setUserInput(initialSate);
     console.log({ ...userInput });
   };
   //destructure event object into target and then target into name and value
@@ -48,6 +50,6 @@ function Signin() {
       </form>
     </div>
   );
-}
+};
 
 export default Signin;
