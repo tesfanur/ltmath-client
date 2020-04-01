@@ -1,32 +1,58 @@
 import React, { useState } from "react";
+import { useMutation } from "@apollo/react-hooks";
+import SIGNUP_USER from "../../operations/mutation";
 import FromInput from "./frominput";
 import CustomButon from "./customButton.jsx";
 import "./sign-in.styles.scss";
 import "./custom-button.styles.scss";
-
-const Signup = () => {
-  const initialSate = { username: "", email: "", password: "" };
+const initialSate = {
+  username: "",
+  email: "",
+  password: "",
+  confirmPassword: ""
+};
+function Signup() {
   const [userInput, setUserInput] = useState(initialSate);
-  const handleSubmit = event => {
-    event.preventDefault();
-    setUserInput(initialSate);
-    console.log({ ...userInput });
-  };
+
   //destructure event object into target and then target into name and value
-  const handleChange = ({ target: { name, value } }) => {
+  const handleChange = ({ target: { name, value } }, signup) => {
     setUserInput({
       ...userInput,
       [name]: value
     });
   };
 
-  let { username, email, password } = userInput;
-  console.log({ username, email, password });
+  let { username, email, password, confirmPassword } = userInput;
+  const signupInput = { username, email, password };
+  console.log({ username, email, password, signupInput });
+  // the signup mutation hook
+  const [signup, { loading, error }] = useMutation(SIGNUP_USER, {
+    variables: { signupInput: { username, email, password } }
+  });
+  console.dir({ signup });
+  console.log({ typeofsignup: typeof signup, loading, error });
+
+  const handleSubmit = (event, signup) => {
+    event.preventDefault();
+    //{ variables: { signupInput: { username, email, password } } }
+    signup().then(({ data }) => {
+      console.log({ data });
+      localStorage.setItem("authorization", data.signup.token);
+    });
+    console.log({ signupFromHandlesubmit: signup });
+    // setUserInput(initialSate);
+    console.log({ ...userInput });
+  };
+  // if loading, return a loading indicator
+  if (loading) return <p>loading...</p>;
   return (
     <div className="sign-in">
-      <h1>Don't yoy have an account?</h1>
+      <h1>Don't you have an account?</h1>
       <span>Signup with your Username, email and password</span>
-      <form className="signup-form" onSubmit={handleSubmit}>
+      <form
+        className="signup-form"
+        onSubmit={event => handleSubmit(event, signup)}
+      >
         <FromInput
           type="email"
           name="email"
@@ -51,6 +77,14 @@ const Signup = () => {
           onChange={handleChange}
           required
         />
+        <FromInput
+          type="password"
+          name="confirmPassword"
+          value={confirmPassword}
+          label="Confirm Password"
+          onChange={handleChange}
+          required
+        />
 
         <CustomButon className="custom-button" type="submit" name="submit">
           Sign up
@@ -58,6 +92,6 @@ const Signup = () => {
       </form>
     </div>
   );
-};
+}
 
 export default Signup;
