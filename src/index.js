@@ -9,6 +9,7 @@ import App from "./App";
 const cache = new InMemoryCache();
 // Pass your GraphQL endpoint to uri
 //LOCAL URL "http://localhost:5000/graphql"
+//heroku url "https://ltmath.herokuapp.com/graphql"
 const client = new ApolloClient({
   uri: "https://ltmath.herokuapp.com/graphql",
   fetchOptions: {
