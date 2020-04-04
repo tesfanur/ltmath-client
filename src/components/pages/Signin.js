@@ -51,7 +51,6 @@ const Signin = () => {
           value={username}
           onChange={handleChange}
           label="Username"
-          required
         />
         <FromInput
           type="password"
@@ -59,7 +58,6 @@ const Signin = () => {
           value={password}
           label="Password"
           onChange={handleChange}
-          required
         />
 
         <CustomButon className="custom-button" type="submit" name="submit">

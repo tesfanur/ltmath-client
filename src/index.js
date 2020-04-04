@@ -8,18 +8,19 @@ import App from "./App";
 // Instantiate required constructor fields
 const cache = new InMemoryCache();
 // Pass your GraphQL endpoint to uri
+//LOCAL URL "http://localhost:5000/graphql"
 const client = new ApolloClient({
-  uri: "http://localhost:5000/graphql",
+  uri: "https://ltmath.herokuapp.com/graphql",
   fetchOptions: {
-    credentials: "include"
+    credentials: "include",
   },
-  request: operation => {
+  request: (operation) => {
     const token = localStorage.getItem("token");
     console.log({ token });
     operation.setContext({
       headers: {
-        authorization: token
-      }
+        authorization: token,
+      },
     });
   },
   onError: ({ networkError }) => {
@@ -34,12 +35,12 @@ const client = new ApolloClient({
       }
     }
   },
-  cache
+  cache,
 });
 
 //HOC
 
-const ApolloApp = AppComponent => (
+const ApolloApp = (AppComponent) => (
   <ApolloProvider client={client}>
     <AppComponent />
   </ApolloProvider>

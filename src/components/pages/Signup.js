@@ -59,7 +59,6 @@ function Signup() {
           value={email}
           onChange={handleChange}
           label="Email"
-          required
         />
         <FromInput
           type="text"
@@ -67,7 +66,6 @@ function Signup() {
           value={username}
           onChange={handleChange}
           label="Username"
-          required
         />
         <FromInput
           type="password"
@@ -75,7 +73,6 @@ function Signup() {
           value={password}
           label="Password"
           onChange={handleChange}
-          required
         />
         <FromInput
           type="password"
@@ -83,7 +80,6 @@ function Signup() {
           value={confirmPassword}
           label="Confirm Password"
           onChange={handleChange}
-          required
         />
 
         <CustomButon className="custom-button" type="submit" name="submit">
