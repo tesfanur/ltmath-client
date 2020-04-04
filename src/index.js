@@ -28,7 +28,7 @@ const client = new ApolloClient({
       console.log(`Network error occured, ${networkError}`);
       if (networkError.statusCode === 401) {
         //remove token
-        localStorage.removeItem("token");
+        localStorage.removeItem("authorization");
       }
       if (networkError.statusCode === 400) {
         console.log({ message: `Response was not successfull!` });
