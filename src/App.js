@@ -1,52 +1,20 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
 import Home from "./components/pages/home";
+import Users from "./components/pages/Users";
+import Topics from "./components/pages/Topics";
+import SubTopics from "./components/pages/SubTopics";
 import About from "./components/pages/about";
 import Signin from "./components/pages/Signin";
 import Signup from "./components/pages/Signup";
 import "./App.css";
-
-// import { gql } from "apollo-boost";
-// import { Query } from "react-apollo";
-
-// const GET_USERS = gql`
-//   query {
-//     users {
-//       username
-//       email
-//       usertype
-//       token
-//     }
-//   }
-// `;
-
-// const App = () => (
-//   <Query query={GET_USERS}>
-//     {({ loading, error, data }) => {
-//       if (loading) return <div>Loading...</div>;
-//       if (error) return <div>Error :(</div>;
-
-//       return <UserList users={data.users} />;
-//     }}
-//   </Query>
-// );
-
-// const UserList = ({ users }) => {
-//   console.log({ users });
-//   return (
-//     <div>
-//       <ul>
-//         {users.map(user => {
-//           const { username, email, usertype } = user;
-//           console.log({ username, email, usertype });
-//           return <li key={email}>{username}</li>;
-//         })}
-//       </ul>
-//     </div>
-//   );
-// };
-// export default App;
-
+//TODO: select option for subject topic and sub topic
 export default function App() {
   return (
     <Router>
@@ -57,16 +25,22 @@ export default function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <NavLink to="/users">Users</NavLink>
             </li>
             <li>
-              <Link to="/signin">Signin</Link>
+              <NavLink to="/topics">Topics</NavLink>
             </li>
             <li>
-              <Link to="/signup">Signup</Link>
+              <NavLink to="/subtopics">SubTopics</NavLink>
+            </li>
+            <li>
+              <NavLink to="/signin">Signin</NavLink>
+            </li>
+            <li>
+              <NavLink to="/signup">Signup</NavLink>
             </li>
           </ul>
         </nav>
@@ -83,6 +57,12 @@ export default function App() {
           <Route path="/users">
             <Users />
           </Route>
+          <Route path="/topics">
+            <Topics />
+          </Route>
+          <Route path="/subtopics">
+            <SubTopics />
+          </Route>
 
           <Route path="/signin">
             <Signin />
@@ -94,16 +74,4 @@ export default function App() {
       </div>
     </Router>
   );
-}
-
-// function Home() {
-//   return <h2>Home</h2>;
-// }
-
-// function About() {
-//   return <h2>About</h2>;
-// }
-
-function Users() {
-  return <h2>Users</h2>;
 }

@@ -15,15 +15,18 @@ body {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 a:hover {
   color: deeppink;
 }
 nav {
-  background-color: dodgerblue;
+  background-color: #2bbbc0;
+  /* #29e6c9; */
+  /* dodgerblue; */
   padding: 3px;
   margin: auto;
+  color: #04338d;
 }
 nav ul {
   width: 80%;
@@ -35,17 +38,18 @@ nav ul {
 
 nav ul li {
   display: block;
-  background-color: cyan;
+  /* background-color: cyan; */
   margin: 15px;
   padding: 3px;
   border-radius: 15%;
 }
 
 nav ul li:hover {
-  background-color: darkorange;
+  background-color: whitesmoke;
 }
-nav ul li a:active {
-  color: darkseagreen;
+nav ul li a.active {
+  color: deeppink;
+  background: whitesmoke;
 }
 /* .signin-form {
   left: 50%;

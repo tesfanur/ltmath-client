@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/react-hooks";
-import SIGNUP_USER from "../../operations/mutation";
+import SIGNUP_USER from "../../operations/mutation/signup";
 import FromInput from "./frominput";
 import CustomButon from "./customButton.jsx";
 import "./sign-in.styles.scss";
@@ -9,7 +9,7 @@ const initialSate = {
   username: "",
   email: "",
   password: "",
-  confirmPassword: ""
+  confirmPassword: "",
 };
 function Signup() {
   const [userInput, setUserInput] = useState(initialSate);
@@ -18,7 +18,7 @@ function Signup() {
   const handleChange = ({ target: { name, value } }, signup) => {
     setUserInput({
       ...userInput,
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -27,7 +27,7 @@ function Signup() {
   console.log({ username, email, password, signupInput });
   // the signup mutation hook
   const [signup, { loading, error }] = useMutation(SIGNUP_USER, {
-    variables: { signupInput: { username, email, password } }
+    variables: { signupInput: { username, email, password } },
   });
   console.dir({ signup });
   console.log({ typeofsignup: typeof signup, loading, error });
@@ -51,7 +51,7 @@ function Signup() {
       <span>Signup with your Username, email and password</span>
       <form
         className="signup-form"
-        onSubmit={event => handleSubmit(event, signup)}
+        onSubmit={(event) => handleSubmit(event, signup)}
       >
         <FromInput
           type="email"
