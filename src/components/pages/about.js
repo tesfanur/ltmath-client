@@ -1,8 +1,9 @@
 import React from "react";
+import { Container } from "semantic-ui-react";
 
 function About() {
   return (
-    <div>
+    <Container>
       <h2>About</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus
@@ -13,7 +14,7 @@ function About() {
         consequatur qui officiis nobis ipsam, libero aperiam aspernatur sed
         tenetur quidem commodi hic!
       </p>
-    </div>
+    </Container>
   );
 }
 

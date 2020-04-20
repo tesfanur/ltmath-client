@@ -1,9 +1,17 @@
 import React, { useState } from "react";
-import { Message, Container } from "semantic-ui-react";
-import { useMutation } from "@apollo/react-hooks";
+import {
+  Message,
+  Container,
+  Form,
+  Button,
+  Header,
+  Icon,
+  Input,
+} from "semantic-ui-react";
+import { useMutation, useApolloClient } from "@apollo/react-hooks";
 import SIGNUP_USER from "../../operations/mutation/signup";
-import FromInput from "./frominput";
-import CustomButon from "./customButton.jsx";
+// import FromInput from "./frominput";
+// import CustomButon from "./customButton.jsx";
 import "./sign-in.styles.scss";
 import "./custom-button.styles.scss";
 const initialSate = {
@@ -13,6 +21,8 @@ const initialSate = {
   confirmPassword: "",
 };
 function Signup() {
+  const client = useApolloClient();
+  console.log({ client });
   const [userInput, setUserInput] = useState(initialSate);
 
   //destructure event object into target and then target into name and value
@@ -33,13 +43,23 @@ function Signup() {
   console.dir({ signup });
   console.log({ typeofsignup: typeof signup, loading, error });
 
-  const handleSubmit = (event, signup) => {
+  const handleSubmit = async (event, signup) => {
     event.preventDefault();
     //{ variables: { signupInput: { username, email, password } } }
-    signup().then(({ data }) => {
-      console.log({ data });
-      localStorage.setItem("authorization", data.signup.token);
-    });
+    // signup().then(({ data }) => {
+    //   console.log({ data });
+    //   localStorage.setItem("authorization", data.signup.token);
+    // });
+    try {
+      const { data } = await signup();
+      if (data) {
+        console.log({ data });
+        localStorage.setItem("authorization", data.signin.token);
+      }
+    } catch (error) {
+      console.log({ error });
+    }
+
     console.log({ signupFromHandlesubmit: signup });
     // setUserInput(initialSate);
     console.log({ ...userInput });
@@ -48,53 +68,81 @@ function Signup() {
   if (loading) return <p>loading...</p>;
   if (error)
     return (
-      <Message
-        error
-        header="There's something wrong in fetching your request"
-        content={error.message}
-      />
+      <Container style={{ marginTop: "10px", width: "50%" }}>
+        <Message
+          error
+          header="There's something wrong in fetching your request"
+          content={error.message}
+        />
+      </Container>
     );
-  return (
-    <Container>
-      <h1>Don't you have an account?</h1>
-      <span>Signup with your Username, email and password</span>
-      <form
-        className="signup-form"
-        onSubmit={(event) => handleSubmit(event, signup)}
-      >
-        <FromInput
-          type="email"
-          name="email"
-          value={email}
-          onChange={handleChange}
-          label="Email"
-        />
-        <FromInput
-          type="text"
-          name="username"
-          value={username}
-          onChange={handleChange}
-          label="Username"
-        />
-        <FromInput
-          type="password"
-          name="password"
-          value={password}
-          label="Password"
-          onChange={handleChange}
-        />
-        <FromInput
-          type="password"
-          name="confirmPassword"
-          value={confirmPassword}
-          label="Confirm Password"
-          onChange={handleChange}
-        />
 
-        <CustomButon className="custom-button" type="submit" name="submit">
-          Sign up
-        </CustomButon>
-      </form>
+  return (
+    <Container style={{ width: "30%", alignItems: "center" }}>
+      <Header as="h2" icon>
+        <Icon name="user" />
+        Signup
+        <Header.Subheader>Dont' you have account?</Header.Subheader>
+      </Header>
+      <Form
+        onSubmit={(event) => handleSubmit(event, signup)}
+        style={{
+          background: "whitesmoke",
+          padding: "20px",
+          borderRadius: "15px",
+        }}
+      >
+        <Form.Field>
+          <label>Email</label>
+          <Input
+            icon="teal mail"
+            iconPosition="left"
+            placeholder="Email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+          />
+        </Form.Field>
+        <Form.Field>
+          <label>Username</label>
+          <Input
+            icon="teal user"
+            iconPosition="left"
+            placeholder="Username"
+            name="username"
+            value={username}
+            onChange={handleChange}
+          />
+        </Form.Field>
+
+        <Form.Field>
+          <label>Password</label>
+          <Input
+            icon="teal lock"
+            iconPosition="left"
+            placeholder="Password"
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+          />
+        </Form.Field>
+        <Form.Field>
+          <label>Confirm Password</label>
+          <Input
+            icon="teal lock"
+            iconPosition="left"
+            placeholder="Confirm Password"
+            type="password"
+            name="confirmPassword"
+            value={confirmPassword}
+            onChange={handleChange}
+          />
+        </Form.Field>
+        <Button type="submit" primary>
+          Signup
+        </Button>
+      </Form>
     </Container>
   );
 }

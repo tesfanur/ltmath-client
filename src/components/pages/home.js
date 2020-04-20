@@ -7,11 +7,7 @@ const Title = styled.h1`
 `;
 
 function Home() {
-  return (
-    <div>
-      <Title>Hello World, this is my first styled component!</Title>
-    </div>
-  );
+  return <Title>Hello World, this is my first styled component!</Title>;
 }
 
 export default Home;

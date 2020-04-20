@@ -9,11 +9,13 @@ function Users() {
   if (loading) return <p>Loading ...</p>;
   if (error)
     return (
-      <Message
-        error
-        header="There's something wrong in fetching your request"
-        content={error.message}
-      />
+      <Container style={{ marginTop: "10px", width: "50%" }}>
+        <Message
+          error
+          header="There's something wrong in fetching your request"
+          content={error.message}
+        />
+      </Container>
     );
   return (
     <Container>
