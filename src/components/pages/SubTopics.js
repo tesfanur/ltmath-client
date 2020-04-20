@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { List, Select, Dropdown, Card, Icon } from "semantic-ui-react";
+import {
+  List,
+  Select,
+  Dropdown,
+  Card,
+  Icon,
+  Message,
+  Container,
+} from "semantic-ui-react";
 import { useQuery } from "@apollo/react-hooks";
 import { GET_ALL_SUB_TOPICS } from "../../operations/query/Topics";
 
@@ -10,7 +18,14 @@ function SubTopics() {
   });
   console.log("data", data, topicId, setTopicId);
   if (loading) return <p>Loading ...</p>;
-  if (error) return <h1>You are not allowed to view Topics</h1>;
+  if (error)
+    return (
+      <Message
+        error
+        header="There's something wrong in fetching your request"
+        content={error.message}
+      />
+    );
   let topic,
     subTopics = [];
   const countryOptions = [
@@ -82,7 +97,7 @@ function SubTopics() {
     subTopics = data.getAllSubTopics[0].subTopics;
   }
   return (
-    <div className="container">
+    <Container>
       {/* <ul className="container"> */}
       <List>
         {subTopics.map(({ subTopic, _id }) => {
@@ -103,7 +118,7 @@ function SubTopics() {
         meta="Friend"
         description="Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat."
       />
-    </div>
+    </Container>
   );
 }
 export default SubTopics;

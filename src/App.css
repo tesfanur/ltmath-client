@@ -5,14 +5,12 @@
 body {
   font-family: "Open Sans Condensed";
 }
-.container {
-  width: 90%;
-  /* background-color: lightgrey; */
-  /* padding: 10px; */
+/* .container {
+  width: 90%; 
   margin-left: auto;
   margin-right: auto;
   height: 100vh;
-}
+} */
 a {
   text-decoration: none;
   color: white;
@@ -29,7 +27,7 @@ nav {
   color: #04338d;
 }
 nav ul {
-  width: 80%;
+  /* width: 80%; */
   display: flex;
   justify-content: flex-end;
   list-style-type: none;

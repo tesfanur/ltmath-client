@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Message, Container } from "semantic-ui-react";
 import { useMutation } from "@apollo/react-hooks";
 import SIGNIN_USER from "../../operations/mutation/signin";
 import FromInput from "./frominput";
@@ -35,10 +36,17 @@ const Signin = () => {
     },
   });
   if (loading) return <div>loading...!</div>;
-  if (error) return <div>Something went wrong!</div>;
+  if (error)
+    return (
+      <Message
+        error
+        header="There's something wrong in fetching your request"
+        content={error.message}
+      />
+    );
   console.log({ username, password, loading, errorType: typeof error });
   return (
-    <div className="sign-in">
+    <Container className="sign-in">
       <h1>I have already have an account</h1>
       <span>Signin with your email and password</span>
       <form
@@ -65,7 +73,7 @@ const Signin = () => {
         </CustomButon>
         {error && <h1>{JSON.stringify(error)}</h1>}
       </form>
-    </div>
+    </Container>
   );
 };
 

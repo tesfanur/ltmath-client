@@ -3,9 +3,9 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   NavLink,
 } from "react-router-dom";
+
 import Home from "./components/pages/home";
 import Users from "./components/pages/Users";
 import Topics from "./components/pages/Topics";
@@ -14,15 +14,16 @@ import About from "./components/pages/about";
 import Signin from "./components/pages/Signin";
 import Signup from "./components/pages/Signup";
 import "./App.css";
+
 //TODO: select option for subject topic and sub topic
 export default function App() {
   return (
     <Router>
-      <div className="container">
+      <div>
         <nav>
           <ul style={{ decoration: "none" }}>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
               <NavLink to="/about">About</NavLink>
