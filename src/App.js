@@ -24,7 +24,7 @@ export default function App() {
       <Router>
         <NavBar />
         <div>
-          <nav>
+          {/* <nav>
             <ul style={{ decoration: "none" }}>
               <li>
                 <NavLink to="/">Home</NavLink>
@@ -48,10 +48,8 @@ export default function App() {
                 <NavLink to="/signup">Signup</NavLink>
               </li>
             </ul>
-          </nav>
+          </nav> */}
 
-          {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
           <Switch>
             <Route exact path="/">
               <Home />
