@@ -48,6 +48,7 @@ function SubTopics() {
 
   if (data.getAllSubTopics.length === 1) {
     topic = data.getAllSubTopics[0].topic;
+    console.log({ topic });
     subTopics = data.getAllSubTopics[0].subTopics;
 
     client.writeData({ data: { subTopics } });

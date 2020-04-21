@@ -3,30 +3,31 @@ import {
   Message,
   Container,
   Form,
-  Button,
   Header,
-  Icon,
   Input,
+  Image,
 } from "semantic-ui-react";
+import letMathLogo from "../../img/ltMath.svg";
+import { CustomStyledButton as SubmitButton } from "../Button";
 import { useMutation, useApolloClient } from "@apollo/react-hooks";
 import SIGNIN_USER from "../../operations/mutation/signin";
-// import FromInput from "./frominput";
-// import CustomButon from "./customButton.jsx";
 import "./sign-in.styles.scss";
 import "./custom-button.styles.scss";
 console.log({ SIGNIN_USER });
 const initialSate = { username: "", password: "" };
-const Signin = () => {
+const Signin = (props) => {
   const client = useApolloClient();
-  console.log({ client });
+  // console.log({ client });
   const [userInput, setUserInput] = useState(initialSate);
+  const [errors, setErrors] = useState([]);
   const handleSubmit = async (event, signin) => {
     event.preventDefault();
     try {
       const { data } = await signin();
       if (data) {
-        console.log({ data });
+        // console.log({ data });
         localStorage.setItem("authorization", data.signin.token);
+        client.writeData({ data: { data } });
       }
     } catch (error) {
       console.log({ error });
@@ -49,33 +50,59 @@ const Signin = () => {
     variables: {
       signinInput: { username, password },
     },
-    // onError(error) {
-    //   console.log({ error });
-    // },
+    update(proxy, result) {
+      console.log({ result });
+      props.history.push("/");
+    },
+    onError(error) {
+      console.log({ errorFromOnErrorSFunction: error });
+      errors.push(error.graphQLErrors[0].message);
+      setErrors(errors);
+    },
   });
+  if (errors) console.log({ errors });
   if (loading) return <div>loading...!</div>;
-  if (error) {
-    console.log({ error_message: error });
-    return (
-      <Container style={{ marginTop: "10px", width: "50%" }}>
-        <Message
-          error
-          header="There's something wrong in fetching your request"
-          content={error.message}
-        />
-      </Container>
-    );
-  }
-  console.log({ username, password, loading, errorType: typeof error });
+  // if (error) {
+  //   console.log({ error_message: error });
+  //   return (
+  //     <Container style={{ marginTop: "10px", width: "50%" }}>
+  //       <Message
+  //         error
+  //         header="There's something wrong in fetching your request"
+  //         content={error.message}
+  //       />
+  //     </Container>
+  //   );
+  // }
+  console.log({ username, loading, errorType: typeof error });
 
   return (
-    <Container style={{ width: "30%", alignItems: "center" }}>
-      <Header as="h2" icon>
-        <Icon name="unlock alternate" />
-        Login
-        <Header.Subheader>To use ltMath.</Header.Subheader>
-      </Header>
-      <Form onSubmit={(event) => handleSubmit(event, signin)}>
+    <Container
+      style={{
+        width: "25%",
+        alignItems: "center",
+        marginTop: "2.5rem",
+      }}
+    >
+      <Container
+        style={{
+          width: "75%",
+          alignItems: "center",
+          marginTop: "2.5rem",
+          marginBottom: "2.5rem",
+        }}
+      >
+        <Header>
+          <Image src={letMathLogo} style={{ width: "70%", color: "teal" }} />
+          <Header.Subheader>
+            Step by step Math Learning | Teaching web tool!
+          </Header.Subheader>
+        </Header>
+      </Container>
+      <Form
+        onSubmit={(event) => handleSubmit(event, signin)}
+        className={loading ? "loading" : ""}
+      >
         <Form.Field required>
           <label>Username</label>
           <Input
@@ -83,6 +110,7 @@ const Signin = () => {
             iconPosition="left"
             placeholder="Username"
             name="username"
+            // error={errors.password ? true : false}
             value={username}
             onChange={handleChange}
           />
@@ -93,49 +121,29 @@ const Signin = () => {
             icon="teal lock"
             iconPosition="left"
             placeholder="Password"
+            type="password"
+            // error={errors.username ? true : false}
             name="password"
             value={password}
             onChange={handleChange}
           />
         </Form.Field>
-        <Button type="submit" primary>
+        <SubmitButton type="submit" className="fluid">
           Login
-        </Button>
-        {error && error.message}
+        </SubmitButton>
+        {/* {error && error.message} */}
       </Form>
+      {errors.length > 0 && (
+        <div className="ui error message">
+          <ul className="list">
+            {errors.map((value, i) => {
+              return <li key={i}>{value}</li>;
+            })}
+          </ul>
+        </div>
+      )}
     </Container>
   );
-
-  // return (
-  //   <Container className="sign-in">
-  //     <h1>I have already have an account</h1>
-  //     <span>Signin with your email and password</span>
-  //     <form
-  //       className="signin-form"
-  //       onSubmit={(event) => handleSubmit(event, signin)}
-  //     >
-  //       <FromInput
-  //         type="username"
-  //         name="username"
-  //         value={username}
-  //         onChange={handleChange}
-  //         label="Username"
-  //       />
-  //       <FromInput
-  //         type="password"
-  //         name="password"
-  //         value={password}
-  //         label="Password"
-  //         onChange={handleChange}
-  //       />
-
-  //       <CustomButon className="custom-button" type="submit" name="submit">
-  //         Sign in
-  //       </CustomButon>
-  //       {error && <h1>{JSON.stringify(error)}</h1>}
-  //     </form>
-  //   </Container>
-  // );
 };
 
 export default Signin;

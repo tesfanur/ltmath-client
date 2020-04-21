@@ -3,11 +3,13 @@ import {
   Message,
   Container,
   Form,
-  Button,
   Header,
-  Icon,
   Input,
+  Image,
 } from "semantic-ui-react";
+
+import letMathLogo from "../../img/ltMath.svg";
+import { CustomStyledButton as SubmitButton } from "../Button";
 import { useMutation, useApolloClient } from "@apollo/react-hooks";
 import SIGNUP_USER from "../../operations/mutation/signup";
 // import FromInput from "./frominput";
@@ -78,24 +80,33 @@ function Signup() {
     );
 
   return (
-    <Container style={{ width: "30%", alignItems: "center" }}>
-      <Header as="h2" icon>
-        <Icon name="user" />
-        Signup
-        <Header.Subheader>Dont' you have account?</Header.Subheader>
-      </Header>
+    <Container style={{ width: "25%", alignItems: "center" }}>
+      <Container
+        style={{
+          width: "75%",
+          alignItems: "center",
+          marginTop: "2.5rem",
+          marginBottom: "2.5rem",
+        }}
+      >
+        <Header>
+          <Image src={letMathLogo} style={{ width: "70%", color: "teal" }} />
+          <Header.Subheader>
+            Step by step Math Learning | Teaching web tool!
+          </Header.Subheader>
+        </Header>
+      </Container>
       <Form
         onSubmit={(event) => handleSubmit(event, signup)}
         style={{
-          background: "whitesmoke",
-          padding: "20px",
+          // background: "whitesmoke",
           borderRadius: "15px",
         }}
       >
         <Form.Field>
           <label>Email</label>
           <Input
-            icon="teal mail"
+            icon="mail teal"
             iconPosition="left"
             placeholder="Email"
             name="email"
@@ -139,9 +150,9 @@ function Signup() {
             onChange={handleChange}
           />
         </Form.Field>
-        <Button type="submit" primary>
+        <SubmitButton type="submit" className="fluid">
           Signup
-        </Button>
+        </SubmitButton>
       </Form>
     </Container>
   );
