@@ -1,19 +1,14 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  NavLink,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./components/pages/home";
 // import VisibleSidebar from "./components/pages/Sidebar";
-import Users from "./components/pages/Users";
-import Topics from "./components/pages/Topics";
-import SubTopics from "./components/pages/SubTopics";
+import Users from "./components/pages/users";
+import Topics from "./components/pages/topics";
+import SubTopics from "./components/pages/subTopics";
 import About from "./components/pages/about";
-import Signin from "./components/pages/Signin";
-import Signup from "./components/pages/Signup";
+import Signin from "./components/pages/signin";
+import Signup from "./components/pages/signup";
 import NavBar from "./components/NavBar";
 import "./App.css";
 
@@ -23,59 +18,36 @@ export default function App() {
     <>
       <Router>
         <NavBar />
-        <div>
-          {/* <nav>
-            <ul style={{ decoration: "none" }}>
-              <li>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/about">About</NavLink>
-              </li>
-              <li>
-                <NavLink to="/users">Users</NavLink>
-              </li>
-              <li>
-                <NavLink to="/topics">Topics</NavLink>
-              </li>
-              <li>
-                <NavLink to="/subtopics">SubTopics</NavLink>
-              </li>
-              <li>
-                <NavLink to="/signin">Signin</NavLink>
-              </li>
-              <li>
-                <NavLink to="/signup">Signup</NavLink>
-              </li>
-            </ul>
-          </nav> */}
-
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/users">
-              <Users />
-            </Route>
-            <Route path="/topics">
-              <Topics />
-            </Route>
-            <Route path="/subtopics">
-              <SubTopics />
-            </Route>
-
-            <Route path="/signin">
-              <Signin />
-            </Route>
-            <Route path="/signup">
-              <Signup />
-            </Route>
-          </Switch>
-        </div>
+        <AllRoutes />
       </Router>
     </>
+  );
+}
+
+function AllRoutes() {
+  return (
+    <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route exact path="/about">
+        <About />
+      </Route>
+      <Route exact path="/users">
+        <Users />
+      </Route>
+      <Route exact path="/topics">
+        <Topics />
+      </Route>
+      <Route exact path="/subtopics">
+        <SubTopics />
+      </Route>
+      <Route exact path="/signin">
+        <Signin />
+      </Route>
+      <Route exact path="/signup">
+        <Signup />
+      </Route>
+    </Switch>
   );
 }
