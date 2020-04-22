@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import {
   Message,
   Container,
@@ -8,18 +9,22 @@ import {
   Image,
 } from "semantic-ui-react";
 import letMathLogo from "../../img/ltMath.svg";
-import { CustomStyledButton as SubmitButton } from "../Button";
+import { CustomStyledButton as SubmitButton } from "../styledcomponents/Button";
 import { useMutation, useApolloClient } from "@apollo/react-hooks";
 import SIGNIN_USER from "../../operations/mutation/signin";
-import "./sign-in.styles.scss";
-import "./custom-button.styles.scss";
 console.log({ SIGNIN_USER });
 const initialSate = { username: "", password: "" };
-const Signin = (props) => {
+/**
+ *
+ * @param {*}
+ */
+const Signin = () => {
   const client = useApolloClient();
+  const history = useHistory();
+  console.log({ history });
   // console.log({ client });
   const [userInput, setUserInput] = useState(initialSate);
-  const [errors, setErrors] = useState([]);
+  const [errors, setErrors] = useState({});
   const handleSubmit = async (event, signin) => {
     event.preventDefault();
     try {
@@ -43,7 +48,6 @@ const Signin = (props) => {
   };
 
   let { username, password } = userInput;
-
   // the signup mutation hook
   const [signin, { loading, error }] = useMutation(SIGNIN_USER, {
     errorPolicy: "all",
@@ -52,28 +56,15 @@ const Signin = (props) => {
     },
     update(proxy, result) {
       console.log({ result });
-      props.history.push("/");
+      history.push("/");
     },
     onError(error) {
       console.log({ errorFromOnErrorSFunction: error });
-      errors.push(error.graphQLErrors[0].message);
-      setErrors(errors);
+      setErrors(error.graphQLErrors[0].extensions.exception.errors);
     },
   });
   if (errors) console.log({ errors });
-  if (loading) return <div>loading...!</div>;
-  // if (error) {
-  //   console.log({ error_message: error });
-  //   return (
-  //     <Container style={{ marginTop: "10px", width: "50%" }}>
-  //       <Message
-  //         error
-  //         header="There's something wrong in fetching your request"
-  //         content={error.message}
-  //       />
-  //     </Container>
-  //   );
-  // }
+
   console.log({ username, loading, errorType: typeof error });
 
   return (
@@ -103,41 +94,40 @@ const Signin = (props) => {
         onSubmit={(event) => handleSubmit(event, signin)}
         className={loading ? "loading" : ""}
       >
-        <Form.Field required>
-          <label>Username</label>
-          <Input
-            icon="teal user"
-            iconPosition="left"
-            placeholder="Username"
-            name="username"
-            // error={errors.password ? true : false}
-            value={username}
-            onChange={handleChange}
-          />
-        </Form.Field>
-        <Form.Field required>
-          <label>Password</label>
-          <Input
-            icon="teal lock"
-            iconPosition="left"
-            placeholder="Password"
-            type="password"
-            // error={errors.username ? true : false}
-            name="password"
-            value={password}
-            onChange={handleChange}
-          />
-        </Form.Field>
+        <Form.Input
+          label="Username"
+          icon="teal user"
+          iconPosition="left"
+          placeholder="Username"
+          name="username"
+          error={errors.username ? true : false}
+          value={username}
+          onChange={handleChange}
+          // required
+        />
+        <Form.Input
+          label="Password"
+          icon="teal lock"
+          iconPosition="left"
+          placeholder="Password"
+          type="password"
+          error={errors.password ? true : false}
+          name="password"
+          value={password}
+          onChange={handleChange}
+          // required
+          // noValidate
+        />
         <SubmitButton type="submit" className="fluid">
           Login
         </SubmitButton>
         {/* {error && error.message} */}
       </Form>
-      {errors.length > 0 && (
+      {Object.keys(errors).length > 0 && (
         <div className="ui error message">
           <ul className="list">
-            {errors.map((value, i) => {
-              return <li key={i}>{value}</li>;
+            {Object.values(errors).map((value) => {
+              return <li key={value}>{value}</li>;
             })}
           </ul>
         </div>
