@@ -11,7 +11,7 @@ import {
 } from "semantic-ui-react";
 
 import { useQuery, useApolloClient } from "@apollo/react-hooks";
-import { GET_ALL_SUB_TOPICS } from "../../operations/query/topics";
+import { GET_ALL_SUB_TOPICS } from "../../operations/query/Topics";
 
 const LoadingMessage = () => (
   <Container style={{ marginTop: "10px", width: "70%" }}>
