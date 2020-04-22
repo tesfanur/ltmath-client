@@ -6,7 +6,7 @@ import Home from "./components/pages/home";
 import Users from "./components/pages/Users";
 import Topics from "./components/pages/Topics";
 import SubTopics from "./components/pages/SubTopics";
-import About from "./components/pages/About";
+import About from "./components/pages/about";
 import Signin from "./components/pages/Signin";
 import Signup from "./components/pages/Signup";
 import NavBar from "./components/NavBar";
