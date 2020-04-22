@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import {
-  Message,
-  Container,
-  Form,
-  Header,
-  Input,
-  Image,
-} from "semantic-ui-react";
+import { Container, Form, Header, Image } from "semantic-ui-react";
 import letMathLogo from "../../img/ltMath.svg";
 import { CustomStyledButton as SubmitButton } from "../styledcomponents/Button";
 import { useMutation, useApolloClient } from "@apollo/react-hooks";

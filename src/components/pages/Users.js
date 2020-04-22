@@ -1,7 +1,7 @@
 import React from "react";
 import { Message, Container } from "semantic-ui-react";
 import { useQuery } from "@apollo/react-hooks";
-import GET_ALL_USERS from "../../operations/query/Users";
+import GET_ALL_USERS from "../../operations/query/users";
 
 function Users() {
   const { loading, error, data } = useQuery(GET_ALL_USERS);

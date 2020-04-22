@@ -2,7 +2,7 @@ import React from "react";
 import { useQuery, useApolloClient } from "@apollo/react-hooks";
 
 import { Message, Container } from "semantic-ui-react";
-import { GET_ALL_TOPICS } from "../../operations/query/Topics";
+import { GET_ALL_TOPICS } from "../../operations/query/topics";
 
 function Topics() {
   const client = useApolloClient();
