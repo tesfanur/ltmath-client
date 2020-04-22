@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from "./components/pages/Home";
+import Home from "./components/pages/home";
 // import VisibleSidebar from "./components/pages/Sidebar";
 import Users from "./components/pages/Users";
 import Topics from "./components/pages/Topics";
