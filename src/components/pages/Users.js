@@ -21,7 +21,11 @@ function Users() {
     <Container>
       <ul>
         {data.users.map(({ username, _id }) => {
-          return <li key={_id}>{username}</li>;
+          return (
+            <li key={_id}>
+              username: >{username}>id: ${_id}
+            </li>
+          );
         })}
       </ul>
     </Container>

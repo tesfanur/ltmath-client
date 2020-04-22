@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./components/pages/home";
 // import VisibleSidebar from "./components/pages/Sidebar";
-import Users from "./components/pages/users";
+import Users from "./components/pages/Users";
 import Topics from "./components/pages/topics";
 import SubTopics from "./components/pages/subTopics";
 import About from "./components/pages/about";
