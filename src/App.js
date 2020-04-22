@@ -10,7 +10,7 @@ import About from "./components/pages/about";
 import Signin from "./components/pages/signin";
 import Signup from "./components/pages/signup";
 import NavBar from "./components/NavBar";
-import "./App.css";
+import "App.css";
 
 //TODO: select option for subject topic and sub topic
 export default function App() {

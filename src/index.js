@@ -4,6 +4,7 @@ import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import { InMemoryCache } from "apollo-cache-inmemory";
 import "semantic-ui-css/semantic.min.css";
+import "App.css";
 import App from "./App";
 
 // Instantiate required constructor fields
