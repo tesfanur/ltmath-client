@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from "./components/pages/home";
+import Home from "./components/pages/Home";
 // import VisibleSidebar from "./components/pages/Sidebar";
 import Users from "./components/pages/Users";
-import Topics from "./components/pages/topics";
-import SubTopics from "./components/pages/subTopics";
-import About from "./components/pages/about";
-import Signin from "./components/pages/signin";
-import Signup from "./components/pages/signup";
+import Topics from "./components/pages/Topics";
+import SubTopics from "./components/pages/SubTopics";
+import About from "./components/pages/About";
+import Signin from "./components/pages/Signin";
+import Signup from "./components/pages/Signup";
 import NavBar from "./components/NavBar";
 
 //TODO: select option for subject topic and sub topic
