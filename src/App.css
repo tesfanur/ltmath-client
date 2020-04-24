@@ -55,7 +55,7 @@ nav ul li a.active {
 .card:hover {
   cursor: pointer;
   rotate: 2.5deg !important;
-  transform: scaleY(1.2) !important;
+  transform: scale(1.2) !important;
 }
 .card > .header {
   color: white !important;
