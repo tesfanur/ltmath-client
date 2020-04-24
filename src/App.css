@@ -41,3 +41,84 @@ nav ul li a.active {
   color: deeppink;
   background: whitesmoke;
 }
+
+/* to be removed*/
+/* body {
+  padding: 40px;
+} */
+
+.card {
+  width: 200px !important;
+  background: #00ced1 !important;
+  color: white !important;
+}
+.card:hover {
+  cursor: pointer;
+  rotate: 2.5deg !important;
+  transform: scaleY(1.2) !important;
+}
+.card > .header {
+  color: white !important;
+}
+.math-card > .header {
+  color: white !important;
+}
+
+.card .image {
+  background: #5ffbf1 !important;
+  /* background-image: linear-gradient(
+    to left top,
+    #ef629f,
+    #f97590,
+    #fb8a88,
+    #faa087,
+    #f5b48e,
+    #efc18e,
+    #e6ce94,
+    #dcda9f,
+    #c6e4a6,
+    #abedb7,
+    #89f5d1,
+    #5ffbf1
+  ) !important; */
+  background-image: linear-gradient(
+    to left bottom,
+    #eb94b9,
+    #f59bad,
+    #fba4a2,
+    #fbae9b,
+    #f8ba97,
+    #f2c492,
+    #e8ce92,
+    #dbd897,
+    #c4e3a1,
+    #a8edb4,
+    #86f5d0,
+    #5ffbf1
+  ) !important;
+  vertical-align: "middle" !important;
+  width: 200px;
+  height: 200px;
+  /* margin: 5px; */
+}
+/* .card .image.icon {
+  text-align: center;
+  line-height: 200px;
+}
+.card .image.icon i {
+  display: inline-block;
+  vertical-align: middle;
+}
+.card .image.portrait img {
+  border-radius: 0 !important;
+  height: 200px !important;
+  width: auto !important;
+  margin: auto;
+}
+.card .image.landscape img {
+  border-radius: 0 !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+} */

@@ -8,6 +8,7 @@ const PointingNavBar = () => {
   const pathname = location.pathname;
   // /login
   const path = pathname === "/" ? "home" : pathname.substr(1);
+  console.log({ path });
   const [activeItem, setActiveItem] = useState(path);
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
@@ -19,7 +20,7 @@ const PointingNavBar = () => {
         active={activeItem === "home"}
         onClick={handleItemClick}
         as={NavLink}
-        to="/"
+        to="/home"
       />
       <Menu.Item
         style={{ ...makeWhiteText }}
@@ -35,7 +36,7 @@ const PointingNavBar = () => {
         active={activeItem === "contact us"}
         onClick={handleItemClick}
         as={NavLink}
-        to="/contact"
+        to="/contactus"
       />
       <Menu.Item
         style={{ ...makeWhiteText }}

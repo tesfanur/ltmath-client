@@ -10,6 +10,7 @@ import SubTopics from "./components/pages/SubTopics";
 import About from "./components/pages/about";
 import Signin from "./components/pages/Signin";
 import Signup from "./components/pages/Signup";
+import Dashboard from "./components/pages/Dashboard";
 import NavBar from "./components/NavBar";
 // import { AuthContext, AuthProvider } from "./context/auth";
 // import { AuthProvider } from "./context/auth";
@@ -52,6 +53,9 @@ function AllRoutes() {
       </Route>
       <Route exact path="/signup">
         <Signup />
+      </Route>
+      <Route exact path="/dashboard">
+        <Dashboard />
       </Route>
       <Route exact path="*">
         <PageNotFound />

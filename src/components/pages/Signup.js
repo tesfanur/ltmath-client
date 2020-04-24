@@ -66,11 +66,12 @@ function Signup() {
     <Container style={{ width: "25%", alignItems: "center" }}>
       <Container
         style={{
-          width: "75%",
+          width: "65%",
           alignItems: "center",
           marginTop: "2.5rem",
           marginBottom: "2.5rem",
         }}
+        fluid
       >
         <Header>
           <Image src={letMathLogo} style={{ width: "70%", color: "teal" }} />
@@ -106,6 +107,7 @@ function Signup() {
           value={email}
           error={errors.email ? true : false}
           onChange={handleChange}
+          fluid
         />
         <Form.Input
           label="Username"
@@ -116,6 +118,7 @@ function Signup() {
           value={username}
           error={errors.username ? true : false}
           onChange={handleChange}
+          fluid
         />
 
         <Form.Input
@@ -128,6 +131,7 @@ function Signup() {
           value={password}
           error={errors.password ? true : false}
           onChange={handleChange}
+          fluid
         />
         <Form.Input
           label="Confirm Password"
@@ -139,6 +143,7 @@ function Signup() {
           value={confirmPassword}
           error={errors.confirmPassword ? true : false}
           onChange={handleChange}
+          fluid
         />
         <SubmitButton type="submit" className="fluid">
           Signup

@@ -55,14 +55,7 @@ const Signin = () => {
       }
     },
   });
-  if (errors)
-    console.log({
-      errors,
-      numberOfErrorValues: Object.keys(errors).length,
-    });
-
-  console.log({ username, loading, errorType: typeof error });
-
+  //hoist signin function
   function cb() {
     return signin;
   }
@@ -77,7 +70,7 @@ const Signin = () => {
     >
       <Container
         style={{
-          width: "75%",
+          width: "65%",
           alignItems: "center",
           marginTop: "2.5rem",
           marginBottom: "2.5rem",
@@ -103,6 +96,7 @@ const Signin = () => {
       <Form
         onSubmit={(event) => handleSubmit(event, signin)}
         className={loading ? "loading" : ""}
+        fluid
       >
         <Form.Input
           label="Username"
@@ -110,6 +104,7 @@ const Signin = () => {
           iconPosition="left"
           placeholder="Username"
           name="username"
+          fluid
           error={errors.username ? true : false}
           value={username}
           onChange={handleChange}
@@ -120,9 +115,10 @@ const Signin = () => {
           icon="teal lock"
           iconPosition="left"
           placeholder="Password"
+          name="password"
+          fluid
           type="password"
           error={errors.password ? true : false}
-          name="password"
           value={password}
           onChange={handleChange}
           // required
@@ -131,7 +127,6 @@ const Signin = () => {
         <SubmitButton type="submit" className="fluid">
           Login
         </SubmitButton>
-        {/* {error && error.message} */}
       </Form>
     </Container>
   );
