@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { Input, Menu } from "semantic-ui-react";
 
 const PointingNavBar = () => {
+  const location = useLocation();
   const makeWhiteText = { color: "white" };
-  const pathname = window.location.pathname;
+  const pathname = location.pathname;
   // /login
   const path = pathname === "/" ? "home" : pathname.substr(1);
   const [activeItem, setActiveItem] = useState(path);
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   return (
-    <Menu pointing secondary style={{ background: "#2bbbc0", color: "white" }}>
+    <Menu pointing secondary style={{ background: "#00ced1", color: "white" }}>
       <Menu.Item
         name="home"
         style={{ ...makeWhiteText }}

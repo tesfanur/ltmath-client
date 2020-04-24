@@ -4,8 +4,7 @@ import styled from "styled-components";
 
 const StyledButton = styled(Button)({
   color: "white!important",
-  background: "#2bbbc0!important",
-  //   border: "red 2px solid !important",
+  background: "#00CED1!important",
 });
 
 export const CustomStyledButton = (props) => {
