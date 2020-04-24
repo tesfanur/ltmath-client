@@ -1,4 +1,5 @@
 import React from "react";
+import { Header, Container } from "semantic-ui-react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./components/pages/home";
@@ -10,15 +11,20 @@ import About from "./components/pages/about";
 import Signin from "./components/pages/Signin";
 import Signup from "./components/pages/Signup";
 import NavBar from "./components/NavBar";
+// import { AuthContext, AuthProvider } from "./context/auth";
+// import { AuthProvider } from "./context/auth";
 
 //TODO: select option for subject topic and sub topic
 export default function App() {
+  // const [auth, setAuth] = useContext(AuthContext);
   return (
     <>
+      {/* <AuthProvider> */}
       <Router>
         <NavBar />
         <AllRoutes />
       </Router>
+      {/* </AuthProvider> */}
     </>
   );
 }
@@ -47,6 +53,27 @@ function AllRoutes() {
       <Route exact path="/signup">
         <Signup />
       </Route>
+      <Route exact path="*">
+        <PageNotFound />
+      </Route>
     </Switch>
+  );
+}
+
+function PageNotFound() {
+  return (
+    <Container
+      style={{
+        width: "75%",
+        alignItems: "center",
+        marginTop: "2.5rem",
+        marginBottom: "2.5rem",
+      }}
+    >
+      <Header>
+        Page Not found!
+        <Header.Subheader>Please type the address properly</Header.Subheader>
+      </Header>
+    </Container>
   );
 }
