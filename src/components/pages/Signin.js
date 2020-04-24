@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Container, Form, Header, Image } from "semantic-ui-react";
+
 import letMathLogo from "../../img/ltMath.svg";
 import { CustomStyledButton as SubmitButton } from "../styledcomponents/Button";
 import { useMutation, useApolloClient } from "@apollo/react-hooks";
 import SIGNIN_USER from "../../operations/mutation/signin";
+import { useForm } from "../../utils/hooks";
 console.log({ SIGNIN_USER });
-const initialSate = { username: "", password: "" };
+
 /**
  *
  * @param {*}
@@ -14,32 +16,15 @@ const initialSate = { username: "", password: "" };
 const Signin = () => {
   const client = useApolloClient();
   const history = useHistory();
-  console.log({ history });
+  //TODO implement how to keep user same among different pages
+  // const [name, setName] = useHistory("");
+  console.log({ history, client });
   // console.log({ client });
-  const [userInput, setUserInput] = useState(initialSate);
+  // const [userInput, setUserInput] = useState(initialSate);
   const [errors, setErrors] = useState({});
-  const handleSubmit = async (event, signin) => {
-    event.preventDefault();
-    try {
-      const { data } = await signin();
-      if (data) {
-        // console.log({ data });
-        localStorage.setItem("authorization", data.signin.token);
-        client.writeData({ data: { data } });
-      }
-    } catch (error) {
-      console.log({ error });
-    }
-    console.log({ ...userInput });
-  };
-  //destructure event object into target and then target into name and value
-  const handleChange = ({ target: { name, value } }) => {
-    setUserInput({
-      ...userInput,
-      [name]: value,
-    });
-  };
 
+  const initialSate = { username: "", password: "" };
+  const { handleChange, handleSubmit, userInput } = useForm(cb, initialSate);
   let { username, password } = userInput;
   // the signup mutation hook
   const [signin, { loading, error }] = useMutation(SIGNIN_USER, {
@@ -47,18 +32,40 @@ const Signin = () => {
     variables: {
       signinInput: { username, password },
     },
-    update(proxy, result) {
+    update(_, result) {
+      //_ => proxy
       console.log({ result });
       history.push("/");
     },
     onError(error) {
-      console.log({ errorFromOnErrorSFunction: error });
-      setErrors(error.graphQLErrors[0].extensions.exception.errors);
+      console.log({
+        errorFromOnErrorFunction: error,
+        message: error.message,
+      });
+      if (error.graphQLErrors.length > 0)
+        setErrors(error.graphQLErrors[0].extensions.errors);
+      //if network error occured, attach it to the custom error object
+      let { networkError } = error;
+      console.log({ networkError });
+      if (networkError) {
+        setErrors({
+          networkError:
+            "There's network error when attempting to fetch resource.",
+        });
+      }
     },
   });
-  if (errors) console.log({ errors });
+  if (errors)
+    console.log({
+      errors,
+      numberOfErrorValues: Object.keys(errors).length,
+    });
 
   console.log({ username, loading, errorType: typeof error });
+
+  function cb() {
+    return signin;
+  }
 
   return (
     <Container
@@ -83,6 +90,16 @@ const Signin = () => {
           </Header.Subheader>
         </Header>
       </Container>
+      {Object.keys(errors).length > 0 && (
+        <div className="ui error message">
+          <ul className="list">
+            {Object.values(errors).map((value) => {
+              return <li key={value}>{value}</li>;
+            })}
+          </ul>
+        </div>
+      )}
+
       <Form
         onSubmit={(event) => handleSubmit(event, signin)}
         className={loading ? "loading" : ""}
@@ -116,15 +133,6 @@ const Signin = () => {
         </SubmitButton>
         {/* {error && error.message} */}
       </Form>
-      {Object.keys(errors).length > 0 && (
-        <div className="ui error message">
-          <ul className="list">
-            {Object.values(errors).map((value) => {
-              return <li key={value}>{value}</li>;
-            })}
-          </ul>
-        </div>
-      )}
     </Container>
   );
 };

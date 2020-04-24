@@ -6,12 +6,8 @@ import letMathLogo from "../../img/ltMath.svg";
 import { CustomStyledButton as SubmitButton } from "../styledcomponents/Button";
 import { useMutation, useApolloClient } from "@apollo/react-hooks";
 import SIGNUP_USER from "../../operations/mutation/signup";
-const initialSate = {
-  username: "",
-  email: "",
-  password: "",
-  confirmPassword: "",
-};
+import { useForm } from "../../utils/hooks";
+
 /**
  *user registration function
  */
@@ -19,53 +15,53 @@ function Signup() {
   const client = useApolloClient();
   const history = useHistory();
   console.log({ client, history });
-  const [userInput, setUserInput] = useState(initialSate);
   const [errors, setErrors] = useState({});
-
-  //destructure event object into target and then target into name and value
-  const handleChange = ({ target: { name, value } }, signup) => {
-    setUserInput({
-      ...userInput,
-      [name]: value,
-    });
+  const initialSate = {
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
   };
 
+  const { handleChange, handleSubmit, userInput } = useForm(cb, initialSate);
   let { username, email, password, confirmPassword } = userInput;
-  const signupInput = { username, email, password };
-  console.log({ username, email, password, signupInput });
+  const signupInput = { username, email, password, confirmPassword };
   // the signup mutation hook
   const [signup, { loading, error }] = useMutation(SIGNUP_USER, {
-    variables: { signupInput: { username, email, password, confirmPassword } },
-    update(proxy, result) {
+    variables: { signupInput },
+    update(_, result) {
+      //_ => proxy
       console.log({ result });
       history.push("/");
     },
     onError(err) {
-      console.log({ errorFromOnErrorSFunction: err });
+      console.log({
+        errorFromOnErrorFunction: err,
+        gqErrors: err.graphQLErrors,
+        message: err.message,
+      });
       // if (error.graphQLErrors.length > 0)
-      setErrors(err.graphQLErrors[0].extensions.errors);
+      if (err.graphQLErrors.length > 0)
+        setErrors(err.graphQLErrors[0].extensions.errors);
+      // if (error.message && error.message.indexOf("Networ") >= 0) {
+      let { networkError } = err;
+      console.log({ networkError });
+      if (networkError) {
+        setErrors({
+          networkError:
+            "There's network error when attempting to fetch resource.",
+        });
+      }
+
+      // setErrors({ network: "Network error. Unable to fetch data." });
     },
   });
   console.dir({ signup });
   console.log({ typeofsignup: typeof signup, loading, error });
-
-  const handleSubmit = async (event, signup) => {
-    event.preventDefault();
-    try {
-      const { data } = await signup();
-      if (data) {
-        console.log({ data });
-        localStorage.setItem("authorization", data.signup.token);
-      }
-    } catch (error) {
-      console.log({ error });
-    }
-
-    console.log({ signupFromHandlesubmit: signup });
-    // setUserInput(initialSate);
-    console.log({ ...userInput });
-  };
-
+  function cb() {
+    return signup;
+  }
+  console.log({ errors, errorObjectValues: Object.keys(errors).length });
   return (
     <Container style={{ width: "25%", alignItems: "center" }}>
       <Container
