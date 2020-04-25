@@ -1,0 +1,102 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="279">
+<g transform="translate(-74.000000, -13.000000)">
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" clip-path="url(#cp1)">
+<clipPath id="cp1"><polygon points="-3.35544e+007,-3.35544e+007 -3.35544e+007,3.35544e+007 3.35544e+007,3.35544e+007 3.35544e+007,-3.35544e+007 "/></clipPath>
+<rect fill="rgb(100%,100%,100%)" stroke="none" x="74" y="13" width="240" height="279"/>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" clip-path="url(#cp2)">
+<clipPath id="cp2"><polygon points="74,13 74,292 300,292 300,13 "/></clipPath>
+<polyline fill="none" stroke-opacity="1" stroke-width="1.5625px" stroke="rgb(0%,0%,100%)" points="148.125,291.063 148.188,290.125 148.563,286.125 148.688,285.125 148.75,284.188 148.938,282.375 149.313,278.875 150.063,272.563 150.125,271.813 150.25,271.125 150.438,269.688 150.813,266.938 151.563,261.938 151.625,261.313 151.75,260.75 151.938,259.563 152.313,257.375 153,253.125 153.125,252.688 153.188,252.188 153.375,251.188 153.75,249.375 154.5,245.813 155.938,239.438 156.063,239.063 156.125,238.688 156.313,237.938 156.688,236.5 157.375,233.75 158.875,228.688 158.938,228.375 159.063,228.125 159.188,227.563 159.563,226.438 160.25,224.313 161.563,220.375 161.688,220.125 161.75,219.875 161.938,219.375 162.25,218.5 162.938,216.688 164.313,213.25 164.375,213 164.5,212.75 164.688,212.313 165.063,211.438 165.813,209.75 167.25,206.5 170.188,200.563 170.313,200.375 170.375,200.25 170.563,199.938 170.875,199.25 171.563,198 172.938,195.625 175.75,191.063 181.125,183.25 187,175.938 192.438,170 198.375,164.25 204.188,159.125 209.625,154.875 215.563,150.563 221,146.875 226.438,143.5 232.25,140.063 237.75,137.063 243.625,134 249.125,131.313 254.563,128.813 260.438,126.188 265.938,123.938 271.875,121.563 277.688,119.313 283.125,117.313 289.063,115.25 294.563,113.375 299.938,111.625 305.813,109.75 311.25,108.125 317.188,106.375 317.188,106.375 317.188,106.375 317.188,106.375 317.188,106.375 317.25,106.375 317.25,106.313 317.25,106.313 317.25,106.313 317.25,106.313 317.313,106.313 317.313,106.313 317.313,106.313 317.313,106.313 317.313,106.313 317.313,106.313 317.313,106.313 317.313,106.313 317.375,106.313 317.375,106.313 317.375,106.313 317.375,106.313 317.375,106.313 "/>
+<polyline fill="none" stroke-opacity="1" stroke-width="1.5625px" stroke="rgb(66.6667%,0%,0%)" points="39.625,182.563 39.6875,182.563 39.8125,182.563 39.9375,182.563 40.3125,182.5 41,182.438 42.375,182.313 45.0625,182.063 51,181.5 56.5,180.875 61.9375,180.125 67.75,179.313 73.25,178.438 79.1875,177.375 85,176.188 90.4375,174.938 96.375,173.438 101.875,171.875 107.25,170.188 113.125,168.125 118.563,165.938 124.5,163.313 130.313,160.375 135.688,157.375 141.563,153.688 147.063,149.813 153,145.188 158.875,140 164.313,134.625 170.188,128.063 175.75,121.25 181.125,113.75 187,104.625 192.438,95.125 198.375,83.625 204.188,70.875 209.625,57.5625 215.563,41.4375 221,24.5625 224.313,13.3125 "/>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" clip-path="url(#cp3)">
+<clipPath id="cp3"><polygon points="74,13 74,292 314,292 314,13 "/></clipPath>
+<polyline fill="none" stroke-opacity="1" stroke-width="0.6875px" stroke="rgb(0%,0%,0%)" points="198.813,186.938 198.813,183.188 "/>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 107.298191, 34.924267)" clip-path="url(#cp4)">
+<clipPath id="cp4"><polygon points="73,154 73,171 110,171 110,154 "/></clipPath>
+<text x="74" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)">log</text>
+<text x="91" y="169.5" font-family="Arial" font-size="9px" fill="rgb(0%,0%,0%)" font-style="italic">b</text>
+<text x="96" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)">(</text>
+<text x="100.5" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)" font-style="italic">t</text>
+<text x="106" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)">)</text>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" clip-path="url(#cp5)">
+<clipPath id="cp5"><polygon points="74,13 74,292 314,292 314,13 "/></clipPath>
+<polyline fill="none" stroke-opacity="1" stroke-width="0.6875px" stroke="rgb(0%,0%,0%)" points="247.938,186.938 247.938,183.188 "/>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 171.924267, 34.924267)" clip-path="url(#cp6)">
+<clipPath id="cp6"><polygon points="73,154 73,171 79,171 79,154 "/></clipPath>
+<text x="74" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)" font-style="italic">t</text>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" clip-path="url(#cp7)">
+<clipPath id="cp7"><polygon points="74,13 74,292 314,292 314,13 "/></clipPath>
+<polyline fill="none" stroke-opacity="1" stroke-width="0.6875px" stroke="rgb(0%,0%,0%)" points="74.3125,186.938 300,186.938 "/>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 234.000000, 24.424267)" clip-path="url(#cp8)">
+<clipPath id="cp8"><polygon points="73,154 73,171 80,171 80,154 "/></clipPath>
+<text x="74" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)">x</text>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" clip-path="url(#cp9)">
+<clipPath id="cp9"><polygon points="74,13 74,292 314,292 314,13 "/></clipPath>
+<polyline fill="none" stroke-opacity="1" stroke-width="0.6875px" stroke="rgb(0%,0%,0%)" points="143.75,131.875 147.563,131.875 "/>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 31.772802, -30.601121)" clip-path="url(#cp10)">
+<clipPath id="cp10"><polygon points="73,154 73,171 110,171 110,154 "/></clipPath>
+<text x="74" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)">log</text>
+<text x="91" y="169.5" font-family="Arial" font-size="9px" fill="rgb(0%,0%,0%)" font-style="italic">b</text>
+<text x="96" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)">(</text>
+<text x="100.5" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)" font-style="italic">t</text>
+<text x="106" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)">)</text>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" clip-path="url(#cp11)">
+<clipPath id="cp11"><polygon points="74,13 74,292 314,292 314,13 "/></clipPath>
+<polyline fill="none" stroke-opacity="1" stroke-width="0.6875px" stroke="rgb(0%,0%,0%)" points="143.75,82.75 147.563,82.75 "/>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 62.772802, -79.727198)" clip-path="url(#cp12)">
+<clipPath id="cp12"><polygon points="73,154 73,171 79,171 79,154 "/></clipPath>
+<text x="74" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)" font-style="italic">t</text>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" clip-path="url(#cp13)">
+<clipPath id="cp13"><polygon points="74,13 74,292 314,292 314,13 "/></clipPath>
+<polyline fill="none" stroke-opacity="1" stroke-width="0.6875px" stroke="rgb(0%,0%,0%)" points="143.75,291.063 143.75,13.3125 "/>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" clip-path="url(#cp14)">
+<clipPath id="cp14"><polygon points="74,13 74,292 300,292 300,13 "/></clipPath>
+<polyline fill="none" stroke-opacity="1" stroke-width="0.5px" stroke="rgb(0%,0%,0%)" points="63.9375,266.75 265.313,65.4375 "/>
+<polyline fill="none" stroke-opacity="1" stroke-width="0.5px" stroke="rgb(0%,0%,0%)" points="247.938,131.875 198.813,82.75 "/>
+<polyline fill="none" stroke-opacity="1" stroke-width="0.5px" stroke="rgb(50.0008%,50.0008%,50.0008%)" stroke-dasharray="1,4" points="198.813,186.938 198.813,13.3125 "/>
+<polyline fill="none" stroke-opacity="1" stroke-width="0.5px" stroke="rgb(50.0008%,50.0008%,50.0008%)" stroke-dasharray="1,4" points="247.938,186.938 247.938,131.875 "/>
+<polyline fill="none" stroke-opacity="1" stroke-width="0.5px" stroke="rgb(50.0008%,50.0008%,50.0008%)" stroke-dasharray="1,4" points="143.75,131.875 282.625,131.875 "/>
+<polyline fill="none" stroke-opacity="1" stroke-width="0.5px" stroke="rgb(50.0008%,50.0008%,50.0008%)" stroke-dasharray="1,4" points="143.75,82.75 198.813,82.75 "/>
+<ellipse fill="rgb(0%,0%,0%)" opacity="1" stroke="none" cx="248" cy="132" rx="2.25" ry="2.25"/>
+<ellipse fill="rgb(0%,0%,0%)" opacity="1" stroke="none" cx="199" cy="83" rx="2.25" ry="2.25"/>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 148.565690, -121.387784)" clip-path="url(#cp15)">
+<clipPath id="cp15"><polygon points="73,154 73,171 91,171 91,154 "/></clipPath>
+<text x="74" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)" font-style="italic">b</text>
+<text x="83" y="160.75" font-family="Arial" font-size="9px" fill="rgb(0%,0%,0%)" font-style="italic">x</text>
+</g>
+<g transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 177.726276, -55.425189)" clip-path="url(#cp16)">
+<clipPath id="cp16"><polygon points="73,154 73,171 116,171 116,154 "/></clipPath>
+<text x="74" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)">log</text>
+<text x="91" y="169.5" font-family="Arial" font-size="9px" fill="rgb(0%,0%,0%)" font-style="italic">b</text>
+<text x="97" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)">(</text>
+<text x="102.375" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)" font-style="italic">x</text>
+<text x="109" y="167" font-family="Arial" font-size="12px" fill="rgb(0%,0%,0%)">)</text>
+</g>
+</g>
+<defs>
+<font id="SVGArialFont" horiz-adv-x="1024">
+	<font-face font-family="SVGArial" units-per-em="2048" font-weight="normal"/>
+	<missing-glyph d="M128 0V1638H896V0H128ZM256 128H768V1510H256V128Z"/>
+</font>
+<font id="SVGMathematica2Font" horiz-adv-x="1024">
+	<font-face font-family="SVGMathematica2" units-per-em="2048" font-weight="normal"/>
+	<missing-glyph d="M128 0V1638H896V0H128ZM256 128H768V1510H256V128Z"/>
+<glyph unicode="" glyph-name="H" horiz-adv-x="657" d="M596 -311L571 -348Q301 -177 193 49Q102 241 102 545Q102 799 204 995Q279 1141 409 1253Q489 1313 569 1372L592 1337Q266 1090 266 543Q266 188 356 -22Q433 -203 596 -311Z"/>
+<glyph unicode="" glyph-name="L" horiz-adv-x="657" d="M555 545Q555 241 464 49Q357 -177 86 -348L61 -311Q224 -203 302 -22Q391 188 391 543Q391 1090 66 1337L88 1372Q168 1313 248 1253Q379 1141 454 995Q555 799 555 545Z"/>
+</font>
+</defs>
+<script xmlns=""/></svg>

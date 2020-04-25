@@ -49,18 +49,18 @@ nav ul li a.active {
 
 .card {
   width: 200px !important;
-  background: #00ced1 !important;
+  background: #e5ffb5 !important;
   color: white !important;
+  /* display: flex !important;
+  justify-content: space-evenly; */
+  /* padding-left: 20px !important; */
 }
 .card:hover {
   cursor: pointer;
-  rotate: 2.5deg !important;
-  transform: scale(1.2) !important;
+  /* rotate: 2.5deg !important; */
+  transform: scale(1.1) !important;
 }
 .card > .header {
-  color: white !important;
-}
-.math-card > .header {
   color: white !important;
 }
 
@@ -97,8 +97,10 @@ nav ul li a.active {
     #5ffbf1
   ) !important;
   vertical-align: "middle" !important;
+  text-align: "middle" !important;
   width: 200px;
   height: 200px;
+  /* height: 1fr; */
   /* margin: 5px; */
 }
 /* .card .image.icon {

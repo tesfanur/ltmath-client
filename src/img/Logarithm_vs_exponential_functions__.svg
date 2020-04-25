@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="600" height="480" viewBox="0 0 600 480" id="svg3447" sodipodi:version="0.32" inkscape:version="0.45pre1" sodipodi:docname="logarithm.svg" inkscape:output_extension="org.inkscape.output.svg.inkscape" sodipodi:docbase="C:\Christoffer\zip\gnuplot\gnuplot\bin" sodipodi:modified="true">
+  <metadata id="metadata3846">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview inkscape:window-height="952" inkscape:window-width="1280" inkscape:pageshadow="2" inkscape:pageopacity="0.0" guidetolerance="10.0" gridtolerance="10.0" objecttolerance="10.0" borderopacity="1.0" bordercolor="#666666" pagecolor="#ffffff" id="base" inkscape:zoom="2.2273864" inkscape:cx="281.80054" inkscape:cy="216.01779" inkscape:window-x="-4" inkscape:window-y="-4" inkscape:current-layer="svg3447"/>
+  <desc id="desc3449">Produced by GNUPLOT 4.0 patchlevel 0 </desc>
+  <defs id="defs3451">
+    <circle id="gpDot" r="1"/>
+    <path id="gpPt0" style="stroke-width:0.222" d="M-1,0 h2 M0,-1 v2"/>
+    <path id="gpPt1" style="stroke-width:0.222" d="M-1,-1 L1,1 M1,-1 L-1,1"/>
+    <path id="gpPt2" style="stroke-width:0.222" d="M-1,0 L1,0 M0,-1 L0,1 M-1,-1 L1,1 M-1,1 L1,-1"/>
+    <rect id="gpPt3" style="stroke-width:0.222" x="-1" y="-1" width="2" height="2"/>
+    <use xlink:href="#gpPt3" id="gpPt4" style="fill:currentColor; stroke:none"/>
+    <circle id="gpPt5" style="stroke-width:0.222" cx="0" cy="0" r="1"/>
+    <use xlink:href="#gpPt5" id="gpPt6" style="fill:currentColor; stroke:none"/>
+    <path id="gpPt7" style="stroke-width:0.222" d="M0,-1.33 L-1.33,0.67 L1.33,0.67 z"/>
+    <use xlink:href="#gpPt7" id="gpPt8" style="fill:currentColor; stroke:none"/>
+    <use xlink:href="#gpPt7" id="gpPt9" transform="rotate(180)"/>
+    <use xlink:href="#gpPt9" id="gpPt10" style="fill:currentColor; stroke:none"/>
+    <use xlink:href="#gpPt3" id="gpPt11" transform="rotate(45)"/>
+    <use xlink:href="#gpPt11" id="gpPt12" style="fill:currentColor; stroke:none"/>
+  </defs>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3467"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3469"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3471">
+    <path d="M41,444 L575,444 " id="path3473"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3475"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3477">
+    <path d="M41,444 L50,444 M575,444 L566,444 " id="path3479"/>
+    <g transform="translate(33,448)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:end" id="g3481">
+      <text id="text3483">-5</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3485"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3487">
+    <path d="M41,405 L575,405 " id="path3489"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3491"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3493">
+    <path d="M41,405 L50,405 M575,405 L566,405 " id="path3495"/>
+    <g transform="translate(33,409)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:end" id="g3497">
+      <text id="text3499">-4</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3501"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3503">
+    <path d="M41,366 L575,366 " id="path3505"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3507"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3509">
+    <path d="M41,366 L50,366 M575,366 L566,366 " id="path3511"/>
+    <g transform="translate(33,370)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:end" id="g3513">
+      <text id="text3515">-3</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3517"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3519">
+    <path d="M41,327 L575,327 " id="path3521"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3523"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3525">
+    <path d="M41,327 L50,327 M575,327 L566,327 " id="path3527"/>
+    <g transform="translate(33,331)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:end" id="g3529">
+      <text id="text3531">-2</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3533"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3535">
+    <path d="M41,288 L575,288 " id="path3537"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3539"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3541">
+    <path d="M41,288 L50,288 M575,288 L566,288 " id="path3543"/>
+    <g transform="translate(33,292)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:end" id="g3545">
+      <text id="text3547">-1</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3549"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3551">
+    <path d="M41,249 L575,249 " id="path3553"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3555"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3557">
+    <path d="M41,249 L50,249 M575,249 L566,249 " id="path3559"/>
+    <g transform="translate(33,253)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:end" id="g3561">
+      <text id="text3563"> 0</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3565"/>
+  <g style="fill:none;color:gray;stroke:#4d4d4d;stroke-width:3.00" id="g3567">
+    <path d="M41,210 L575,210 " id="path3569" style="stroke:#4d4d4d"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3571"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3573">
+    <path d="M41,210 L50,210 M575,210 L566,210 " id="path3575"/>
+    <g transform="translate(33,214)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:end" id="g3577">
+      <text id="text3579"> 1</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3581"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3583">
+    <path d="M41,171 L575,171 " id="path3585"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3587"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3589">
+    <path d="M41,171 L50,171 M575,171 L566,171 " id="path3591"/>
+    <g transform="translate(33,175)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:end" id="g3593">
+      <text id="text3595"> 2</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3597"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3599">
+    <path d="M41,132 L575,132 " id="path3601"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3603"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3605">
+    <path d="M41,132 L50,132 M575,132 L566,132 " id="path3607"/>
+    <g transform="translate(33,136)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:end" id="g3609">
+      <text id="text3611"> 3</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3613"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3615">
+    <path d="M41,93 L575,93 " id="path3617"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3619"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3621">
+    <path d="M41,93 L50,93 M575,93 L566,93 " id="path3623"/>
+    <g transform="translate(33,97)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:end" id="g3625">
+      <text id="text3627"> 4</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3629"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3631">
+    <path d="M41,54 L575,54 " id="path3633"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3635"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3637">
+    <path d="M41,54 L50,54 M575,54 L566,54 " id="path3639"/>
+    <g transform="translate(33,58)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:end" id="g3641">
+      <text id="text3643"> 5</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3645"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3647">
+    <path d="M94,444 L94,54 " id="path3649"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3651"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3653">
+    <path d="M94,444 L94,435 M94,54 L94,63 " id="path3655"/>
+    <g transform="translate(94,466)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:middle" id="g3657">
+      <text id="text3659"> 1</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3661"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3663">
+    <path d="M148,444 L148,54 " id="path3665"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3667"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3669">
+    <path d="M148,444 L148,435 M148,54 L148,63 " id="path3671"/>
+    <g transform="translate(148,466)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:middle" id="g3673">
+      <text id="text3675"> 2</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3677"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3679">
+    <path d="M201,444 L201,54 " id="path3681"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3683"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3685">
+    <path d="M201,444 L201,435 M201,54 L201,63 " id="path3687"/>
+    <g transform="translate(201,466)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:middle" id="g3689">
+      <text id="text3691"> 3</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3693"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3695">
+    <path d="M255,444 L255,54 " id="path3697"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3699"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3701">
+    <path d="M255,444 L255,435 M255,54 L255,63 " id="path3703"/>
+    <g transform="translate(255,466)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:middle" id="g3705">
+      <text id="text3707"> 4</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3709"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3711">
+    <path d="M308,444 L308,54 " id="path3713"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3715"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3717">
+    <path d="M308,444 L308,435 M308,54 L308,63 " id="path3719"/>
+    <g transform="translate(308,466)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:middle" id="g3721">
+      <text id="text3723"> 5</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3725"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3727">
+    <path d="M361,444 L361,54 " id="path3729"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3731"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3733">
+    <path d="M361,444 L361,435 M361,54 L361,63 " id="path3735"/>
+    <g transform="translate(361,466)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:middle" id="g3737">
+      <text id="text3739"> 6</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3741"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3743">
+    <path d="M415,444 L415,54 " id="path3745"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3747"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3749">
+    <path d="M415,444 L415,435 M415,54 L415,63 " id="path3751"/>
+    <g transform="translate(415,466)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:middle" id="g3753">
+      <text id="text3755"> 7</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3757"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3759">
+    <path d="M468,444 L468,54 " id="path3761"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3763"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3765">
+    <path d="M468,444 L468,435 M468,54 L468,63 " id="path3767"/>
+    <g transform="translate(468,466)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:middle" id="g3769">
+      <text id="text3771"> 8</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3773"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3775">
+    <path d="M522,444 L522,63 L522,54 " id="path3777"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3779"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3781">
+    <path d="M522,444 L522,435 M522,54 L522,63 " id="path3783"/>
+    <g transform="translate(522,466)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:middle" id="g3785">
+      <text id="text3787"> 9</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3789"/>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:3.00" id="g3791">
+    <path d="M575,444 L575,54 " id="path3793"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3795"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3797">
+    <path d="M575,444 L575,435 M575,54 L575,63 " id="path3799"/>
+    <g transform="translate(575,466)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:middle" id="g3801">
+      <text id="text3803"> 10</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:5.00" id="g3805"/>
+  <g style="fill:none;color:gray;stroke:#000000;stroke-width:5.00" id="g3807">
+    <path d="M41,249 L575,249 " id="path3809" style="stroke:#000000"/>
+  </g>
+  <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00" id="g3811"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3813">
+    <path d="M41,444 L575,444 L575,54 L41,54 L41,444 " id="path3815"/>
+    <g transform="translate(308,31)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00; text-anchor:middle" id="g3817">
+      <text id="text3819">Graph of logarithmic functions</text>
+    </g>
+  </g>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:3.00" id="g3821"/>
+  <g style="fill:none; color:red; stroke:currentColor; stroke-width:3.00" id="g3823">
+    <path d="M 42.408347,419.07954 C 43.474279,404.55089 44.44772,389.976 46.329924,375.85549 C 47.953599,363.30398 49.744714,350.9199 52,339 C 53.377517,330.75503 55.215128,323.43026 57,316 C 58.952792,310.18914 60.520152,304.51807 62.68254,299.7619 L 68,287 L 73,277 L 78.603175,268.7619 L 84,261 L 90,254 L 95,248 L 100,243 L 106,238 L 111,234 L 116.84127,229.68254 L 121.92063,225.68254 L 127,222 L 132.68254,218.60317 L 138,215 L 143,212 L 149,209 L 154.2381,206.52381 L 160,204 L 164.84127,201.60317 L 170.15873,199.47619 L 176,197 L 181,195 L 187,193 L 192,191 L 197,189 L 203,187 L 208,185 L 214,183 L 218.92063,181.31746 L 224,180 L 230,178 L 235.07937,176.47619 L 241,175 L 246.39683,173.31746 L 251,172 L 257,170 L 262.63492,168.52381 L 267.84127,167.28571 L 273,166 L 278,165 L 284,163.60317 L 288.92063,162.44444 L 295,161 L 300,160 L 305,159 L 311,158 L 316,157 L 321,156 L 327,155 L 332,154 L 338,153 L 343,152 L 348,151 L 354,150 L 359,149 L 365,148 L 370,147 L 375,146 L 381,145 L 386,144 L 392,143 L 397,142 L 402.47619,141.31746 L 408,140.68254 L 413,140 L 419,139 L 424,138.47619 L 429.95238,137.63492 L 435,137 L 440,136 L 446.07937,135.31746 L 451.07937,134.39683 L 456,134 L 462,133 L 467,132 L 473,131 L 477.92063,130.44444 L 483,130 L 489,129 L 494,128.68254 L 499,128 L 505,127 L 509.84127,126.52381 L 515.68254,125.68254 L 521,125 L 526.87302,124.36508 L 532,124 L 537.71429,123.52381 L 543,123 L 548.07937,122.47619 L 553,122 L 559.07937,121.39683 L 564.87302,120.68254 L 570,120 L 574.84127,119.31746" id="path3825" sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"/>
+  </g>
+  <g style="fill:none; color:green; stroke:currentColor; stroke-width:3.00" id="g3827">
+    <path d="M 41.734911,365.61084 C 43.226955,355.6355 44.572939,345.51409 46.459316,335.93308 C 48.062596,327.37844 49.768654,318.92658 52,311 C 53.419397,305.83515 54.951884,300.7457 57,296 C 58.877073,291.26244 60.912571,287.47542 63,284 L 68,276 L 73,269 L 78.603175,262.7619 L 84,257 L 89.761905,252.60317 L 95,249 L 100,245 L 106,241 L 111,238 L 117,235 L 121.84127,232.68254 L 127.15873,230.39683 L 133,228 L 138,226 L 143,224 L 149,222 L 154,220 L 160,218 L 165,216 L 170,214 L 175.84127,212.52381 L 181,211 L 186.84127,209.60317 L 192,208 L 197.71429,206.44444 L 202.84127,205.28571 L 208,204 L 214,203 L 219,202 L 224,201 L 230,200 L 235,199 L 241,198 L 246,197 L 251,196 L 257,195 L 262,194 L 268,193 L 273,192 L 278,191 L 284,190 L 289,189 L 295,188 L 300,187 L 305,186.44444 L 310.60317,185.68254 L 316,185 L 321.15873,184.39683 L 326.92063,183.60317 L 332,183 L 337.92063,181.84127 L 343.07937,181.2381 L 347.92063,180.68254 L 354,180 L 360.03175,179.39683 L 364.84127,178.60317 L 370,178 L 375,177.39683 L 381,176.52381 L 386,176 L 391.92063,175.36508 L 397,174.68254 L 402,174 L 407.52381,173.36508 L 413,173 L 418.68254,172.44444 L 424,172 L 429.2381,171.60317 L 435,171 L 440.95238,170.52381 L 446,170 L 450.92063,169.60317 L 456,169 L 462.07937,168.39683 L 467,168 L 473,167.52381 L 478,167 L 483,166.68254 L 489,166 L 494,165.60317 L 499,165 L 505,164.44444 L 510,164 L 516,163.60317 L 521,163 L 526.31746,162.60317 L 532.07937,162.15873 L 537.71429,161.7619 L 542.92063,161.44444 L 548,161 L 553,160.60317 L 558.92063,160.2381 L 564,160 L 569.92063,159.60317 L 575,159.15873" id="path3829" sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"/>
+  </g>
+  <g style="fill:none; color:blue; stroke:currentColor; stroke-width:3.00" id="g3831">
+    <path d="M 41.95939,302.81557 C 43.288149,297.18729 44.71589,291.61841 46.783328,286.43334 C 48.238723,282.72876 49.805095,279.11297 52,276 C 53.492793,273.40586 55.209723,271.14792 57,269 C 58.856286,267.04591 60.984805,265.49598 63,264 C 64.767182,262.51788 65.552242,261.91198 67.663282,260.66328 L 73.280598,257.5612 L 79,255 L 84,253 L 90,251 L 95,249 L 100,247 L 105.83164,245.55104 L 111,244.33672 L 117,243 L 122,242 L 127,241 L 133,240 L 138,239 L 143,238 L 149,237 L 154,236 L 159.77552,235.22448 L 164.88776,234.55104 L 170,234 L 175.4388,233.33672 L 181.44896,232.66328 L 187,232 L 192.78567,231.33672 L 197,231 L 202.77552,230.22448 L 208.11224,229.66328 L 214,229 L 218.88776,228.66328 L 224,228 L 229.66328,227.55104 L 235,227 L 241,226.55104 L 246,226 L 251.67344,225.55104 L 257,225 L 262.5612,224.66328 L 267.77552,224.32656 L 273,224 L 277.77552,223.55104 L 284,223 L 289.5612,222.66328 L 294.88776,222.32656 L 300,222 L 305.5612,221.66328 L 310.4388,221.32656 L 316,221 L 321.33672,220.66328 L 326.32656,220.4388 L 332,220 L 338.11224,219.66328 L 342.66328,219.4388 L 348,219 L 354,218.66328 L 358.88776,218.4388 L 365,218 L 370,218 L 375.33672,217.77552 L 380.55104,217.4388 L 386,217 L 392,216.77552 L 397.11224,216.55104 L 402.22448,216.21433 L 408,216 L 413.44896,215.77552 L 418.77552,215.66328 L 423.66328,215.4388 L 429,215 L 435,215 L 440,214.66328 L 445.77552,214.55104 L 451,214 L 456,214 L 461.88776,213.77552 L 467,213.66328 L 472.21433,213.4388 L 478,213 L 483,213 L 489,212.77552 L 493.88776,212.55104 L 499.44896,212.21433 L 505,212 L 510,212 L 516,212 L 520.88776,211.55104 L 526,211.32656 L 532,211 L 537,211 L 543,210.88776 L 548.11224,210.88776 L 553,210.77552 L 559,210.55104 L 564,210.44896 L 570,210.22448 L 575,210" id="path3833" sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"/>
+  </g><script xmlns=""/>
+  <g style="fill:none; color:cyan; stroke:currentColor; stroke-width:3.00" id="g3835">
+    <path d="M 41.95939,78.920463 L 46.458032,122.97721 L 46.818755,125.32191 L 52,159 C 53.488809,166.66667 54.537084,174.33333 57,182 L 62.68254,198 C 64.086321,202.21043 65.965138,206.57921 68,211 L 73.238095,220.68254 C 75.138848,223.4484 76.294243,226.12454 78.761905,229.07937 L 84,237 L 90,244 L 95,250 L 100,255 L 106,260 L 111,264 L 116.32656,268 L 122,272.15873 L 127,276 L 132.32656,279.67344 L 138,283 L 143,286 L 149,289 L 154,291 L 160,294 L 164.84127,296.07937 L 170.07937,298.60317 L 176,301 L 181,303 L 187,305 L 192,307 L 197,309 L 203,311 L 208,313 L 214,315 L 219,317 L 224.2381,318.39683 L 230,320 L 235.07937,321.68254 L 240.92063,323.31746 L 246,325 L 251.55556,326.55556 L 257,327.84127 L 261.92063,329.07937 L 267.84127,330.55556 L 273,332 L 278,333 L 284,334.15873 L 288.92063,335.31746 L 295,337 L 300,338 L 305,339 L 311,340 L 316,341 L 321,342 L 327,343 L 332,344 L 338,345 L 343,346 L 348,347 L 354,348 L 359,349 L 365,350 L 370,351 L 375,352 L 381,353 L 386,354 L 392,355 L 397,356 L 402,357 L 408,357.87302 L 412.92063,358.55556 L 418.84127,359.55556 L 424,360.31746 L 429.07937,361 L 434.92063,361.55556 L 439.84127,362.15873 L 446.07937,363 L 451.15873,363.52381 L 456.22448,364.11224 L 462,365 L 467.15873,365.68254 L 473,366.68254 L 478,367.39683 L 483,368 L 489,369 L 494.33672,369.78567 L 499.22448,370.33672 L 505,371 L 510.11224,371.5612 L 516,372 L 521,372.55104 L 526,373 L 532,374 L 537,374.5612 L 543,375 L 548.11224,375.4388 L 553,376 L 559,376.55104 L 564.22448,377.11224 L 570,378 L 575,378.55104" id="path3837" sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"/>
+  </g>
+  <g style="fill:none; color:cyan; stroke:currentColor; stroke-width:1.00" id="g3839"/>
+  <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00" id="g3841">
+    <path d="M41,444 L575,444 L575,54 L41,54 L41,444 " id="path3843"/>
+  </g>
+</svg>
