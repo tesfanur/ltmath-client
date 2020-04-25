@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery, useApolloClient } from "@apollo/react-hooks";
 
-import { Message, Container } from "semantic-ui-react";
+import { Message, Container, List, Divider } from "semantic-ui-react";
 import { GET_ALL_TOPICS } from "../../operations/query/Topics";
 
 function Topics() {
@@ -26,13 +26,21 @@ function Topics() {
     topics = data.getAllTopics[0].topics;
     client.writeData({ data: { topics } });
   }
+
   return (
     <Container>
-      <ul className="container">
+      <List>
         {topics.map(({ topic, _id }) => {
-          return <li key={_id}>{topic}</li>;
+          return (
+            <>
+              <List.Item key={_id} href={`/topics/${_id}`}>
+                {topic}
+              </List.Item>
+              <Divider />
+            </>
+          );
         })}
-      </ul>
+      </List>
     </Container>
   );
 }

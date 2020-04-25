@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/pages/home";
 // import VisibleSidebar from "./components/pages/Sidebar";
 import Users from "./components/pages/Users";
+import User from "./components/pages/User";
 import Topics from "./components/pages/Topics";
 import SubTopics from "./components/pages/SubTopics";
 import About from "./components/pages/about";
@@ -42,10 +43,16 @@ function AllRoutes() {
       <Route exact path="/users">
         <Users />
       </Route>
+      <Route exact path="/users">
+        <Users />
+      </Route>
+      <Route exact path="/users/:userId">
+        <User />
+      </Route>
       <Route exact path="/topics">
         <Topics />
       </Route>
-      <Route exact path="/subtopics">
+      <Route exact path="/topics/:topicId">
         <SubTopics />
       </Route>
       <Route exact path="/signin">

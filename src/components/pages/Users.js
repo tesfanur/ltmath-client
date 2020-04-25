@@ -1,9 +1,12 @@
 import React from "react";
-import { Message, Container } from "semantic-ui-react";
+// import { useParams } from "react-router-dom";
+import { Message, Container, Divider, List, Icon } from "semantic-ui-react";
 import { useQuery } from "@apollo/react-hooks";
+
 import GET_ALL_USERS from "../../operations/query/Users";
 
 function Users() {
+  // const { userId } = useParams();
   const { loading, error, data } = useQuery(GET_ALL_USERS);
   console.log({ data });
   if (loading) return <p>Loading ...</p>;
@@ -17,21 +20,38 @@ function Users() {
         />
       </Container>
     );
+
   return (
-    <Container>
-      <ul>
+    <Container style={{ width: "40%" }}>
+      <List>
         {data.users.map(({ username, _id }) => {
           return (
-            <li key={_id}>
-              username: >{username}>id: ${_id}
-            </li>
+            <>
+              <List.Item
+                key={_id}
+                href={`/users/${_id}`}
+                className="flex-list-item"
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "100vw",
+                  }}
+                >
+                  <div className="flex-item">{username}</div>
+                  <div className="flex-item">
+                    <Icon name="user delete" />
+                  </div>
+                </div>
+              </List.Item>
+              <Divider />
+            </>
           );
         })}
-      </ul>
+      </List>
     </Container>
   );
-
-  //   return <div></div>;
 }
 
 export default Users;

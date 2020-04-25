@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+
 import loadingImagePath from "../../img/short-paragraph.png";
+// import { useParams } from "react-router-dom";
 import {
   List,
   Container,
@@ -8,6 +11,7 @@ import {
   Image,
   Segment,
   Message,
+  Divider,
 } from "semantic-ui-react";
 
 import { useQuery, useApolloClient } from "@apollo/react-hooks";
@@ -26,12 +30,14 @@ const LoadingMessage = () => (
 
 function SubTopics() {
   const client = useApolloClient();
+  const { topicId } = useParams();
   console.log({ client });
-  const [topicId, setTopicId] = useState("");
+  // const [topicId, setTopicId] = useState("");
   const { data, loading, error } = useQuery(GET_ALL_SUB_TOPICS, {
-    variables: { topicId: "5e984b1dedced960b8e2ce62" },
+    // variables: { topicId: "5e984b1dedced960b8e2ce64" },
+    variables: { topicId },
   });
-  console.log("data", data, topicId, setTopicId);
+  // console.log("data", data, topicId, setTopicId);
   if (loading) return <LoadingMessage />;
   if (error)
     return (
@@ -57,7 +63,12 @@ function SubTopics() {
     <Container>
       <List>
         {subTopics.map(({ subTopic, _id }) => {
-          return <List.Item key={_id}>{subTopic}</List.Item>;
+          return (
+            <>
+              <List.Item key={_id}>{subTopic}</List.Item>
+              <Divider />
+            </>
+          );
         })}
       </List>
     </Container>

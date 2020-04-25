@@ -42,12 +42,18 @@ nav ul li a.active {
   background: whitesmoke;
 }
 
+/* added late */
+.flex-list-item {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
 /* to be removed*/
 /* body {
   padding: 40px;
 } */
 
-.card {
+.dashboard > .card {
   width: 200px !important;
   background: #e5ffb5 !important;
   color: white !important;
@@ -55,16 +61,16 @@ nav ul li a.active {
   justify-content: space-evenly; */
   /* padding-left: 20px !important; */
 }
-.card:hover {
+.dashboard > .card:hover {
   cursor: pointer;
   /* rotate: 2.5deg !important; */
   transform: scale(1.1) !important;
 }
-.card > .header {
+.dashboard > .card > .header {
   color: white !important;
 }
 
-.card .image {
+.dashboard > .card .image {
   background: #5ffbf1 !important;
   /* background-image: linear-gradient(
     to left top,
