@@ -1,6 +1,8 @@
 import { useState } from "react";
 export const useForm = (callback, initialState) => {
   const [userInput, setUserInput] = useState(initialState);
+
+  console.log({ callback });
   const handleSubmit = async (event, callback) => {
     event.preventDefault();
     try {
@@ -8,8 +10,17 @@ export const useForm = (callback, initialState) => {
       if (data) {
         console.log({
           data,
+          functionName: callback.name,
         });
-        localStorage.setItem("authorization", data.callback.token);
+        // console.log({
+        //   userData: data,
+        //   keys: Object.keys(data),
+        //   values: Object.values(data),
+
+        //   token: Object.values(data)[0].token,
+        // });
+        const authorization = Object.values(data)[0].token;
+        localStorage.setItem("authorization", authorization);
       }
     } catch (error) {
       console.log({ error });
