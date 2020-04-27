@@ -11,7 +11,7 @@ import SubTopics from "./components/pages/SubTopics";
 import About from "./components/pages/about";
 import Signin from "./components/pages/Signin";
 import Signup from "./components/pages/Signup";
-import Signout from "./components/pages/Signout";
+import Signout from "./components/pages/signout";
 import Dashboard from "./components/pages/Dashboard";
 import NavBar from "./components/NavBar";
 import AuthRoute from "./utils/authRoute";
