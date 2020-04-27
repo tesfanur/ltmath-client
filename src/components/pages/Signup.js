@@ -25,15 +25,19 @@ function Signup() {
     confirmPassword: "",
   };
 
-  const { handleChange, handleSubmit, userInput } = useForm(cb, initialSate);
+  const { handleChange, handleSubmit, userInput } = useForm(
+    signupcb,
+    initialSate
+  );
   let { username, email, password, confirmPassword } = userInput;
   const signupInput = { username, email, password, confirmPassword };
   // the signup mutation hook
   const [signup, { loading, error }] = useMutation(SIGNUP_USER, {
     variables: { signupInput },
-    update(_, { data: { signin: userData } }) {
+    update(_, { data: { signup: userData } }) {
       //_ => proxy
-      console.log({ userData });
+      console.log({ userDataFromSignup: userData });
+      // Login user after successful signup
       authContext.signin(userData);
       history.push("/");
     },
@@ -51,8 +55,7 @@ function Signup() {
       console.log({ networkError });
       if (networkError) {
         setErrors({
-          networkError:
-            "There's network error when attempting to fetch resource.",
+          networkError: "There's network connection error.",
         });
       }
 
@@ -61,7 +64,7 @@ function Signup() {
   });
   console.dir({ signup });
   console.log({ typeofsignup: typeof signup, loading, error });
-  function cb() {
+  function signupcb() {
     return signup;
   }
   console.log({ errors, errorObjectValues: Object.keys(errors).length });

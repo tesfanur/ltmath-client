@@ -19,15 +19,15 @@ const Signin = () => {
   console.log({ authContextFromSignin: authContext });
   const client = useApolloClient();
   const history = useHistory();
-  //TODO implement how to keep user same among different pages
-  // const [name, setName] = useHistory("");
   console.log({ history, client });
-  // console.log({ client });
-  // const [userInput, setUserInput] = useState(initialSate);
+
   const [errors, setErrors] = useState({});
 
   const initialSate = { username: "", password: "" };
-  const { handleChange, handleSubmit, userInput } = useForm(cb, initialSate);
+  const { handleChange, handleSubmit, userInput } = useForm(
+    signincb,
+    initialSate
+  );
   let { username, password } = userInput;
   // the signup mutation hook
   const [signin, { loading, error }] = useMutation(SIGNIN_USER, {
@@ -37,7 +37,7 @@ const Signin = () => {
     },
     update(_, { data: { signin: userData } }) {
       //_ => proxy
-      console.log({ userData });
+      console.log({ userDataFromSignin: userData });
       authContext.signin(userData);
       history.push("/");
     },
@@ -53,14 +53,13 @@ const Signin = () => {
       console.log({ networkError });
       if (networkError) {
         setErrors({
-          networkError:
-            "There's network error when attempting to fetch resource.",
+          networkError: "There's network connection error.",
         });
       }
     },
   });
   //hoist signin function
-  function cb() {
+  function signincb() {
     return signin;
   }
   if (error) console.log({ error });

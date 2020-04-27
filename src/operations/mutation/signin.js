@@ -4,6 +4,8 @@ const SIGNIN_USER = gql`
   mutation($signinInput: userSigninInput) {
     signin(input: $signinInput) {
       token
+      username
+      email
     }
   }
 `;
