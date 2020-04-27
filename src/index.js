@@ -14,7 +14,7 @@ const cache = new InMemoryCache();
 //heroku url "https://ltmath.herokuapp.com/graphql"
 const client = new ApolloClient({
   // uri: " http://localhost:5000/graphql",
-  uri: "https://ltmath.herokuapp.com/",
+  uri: "https://ltmath.herokuapp.com/graphql",
   fetchOptions: {
     credentials: "include",
   },

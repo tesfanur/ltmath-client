@@ -10,7 +10,7 @@ import statistics from "../../img/statistics.svg";
 import numberSystems from "../../img/number-systems.svg";
 import solnOfEquation from "../../img/quadratic-equation-solution.svg";
 
-//image resources for grade 9 math
+//image resources for grade 10 math
 import polynomialFunc from "../../img/polynomial functions.svg";
 import expFuncAndLogFunc from "../../img/Logarithm_vs_exponential_functions.svg";
 import solvingInequalities from "../../img/vectors-in-two-dimension.svg";

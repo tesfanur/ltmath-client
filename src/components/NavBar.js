@@ -1,11 +1,21 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { Input, Menu, Sticky } from "semantic-ui-react";
 
-import { AuthContext } from "../context/auth";
+import { useUserAuthState } from "../context/auth";
 
 const PointingNavBar = () => {
-  const { user } = useContext(AuthContext);
+  // const { user, signout } = useContext(AuthContext);
+  const { user, signout } = useUserAuthState();
+
+  console.log({ userFromNavBar: user, signout });
+  // useEffect(
+  //   (user) => {
+  //     console.log({ userFromuseffect: user });
+  //     return () => {};
+  //   },
+  //   [user]
+  // );
   // console.log({ authContextFromNavBar: authContext });
   const location = useLocation();
   const makeWhiteText = { color: "white" };
@@ -15,105 +25,143 @@ const PointingNavBar = () => {
   console.log({ path });
   const [activeItem, setActiveItem] = useState(path);
   const handleItemClick = (e, { name }) => setActiveItem(name);
+  function NavBarWithAuth() {
+    return (
+      <Sticky>
+        <Menu
+          pointing
+          secondary
+          stackable
+          style={{
+            background: "#00ced1",
+            color: "white",
+            marginBottom: "20px",
+          }}
+        >
+          <Menu.Item
+            name={`${user.username}`}
+            style={{ ...makeWhiteText }}
+            // active={activeItem === "home"}
+            as={NavLink}
+            to="/"
+          />
+          <Menu.Item
+            style={{ ...makeWhiteText }}
+            name="about"
+            active={activeItem === "about"}
+            onClick={handleItemClick}
+            as={NavLink}
+            to="/about"
+          />
+          <Menu.Item
+            style={{ ...makeWhiteText }}
+            name="contact us"
+            active={activeItem === "contact us"}
+            onClick={handleItemClick}
+            as={NavLink}
+            to="/contactus"
+          />
 
-  return (
-    <Sticky>
-      <Menu
-        pointing
-        secondary
-        stackable
-        style={{ background: "#00ced1", color: "white", marginBottom: "20px" }}
-      >
-        <Menu.Item
-          name="home"
-          style={{ ...makeWhiteText }}
-          active={activeItem === "home"}
-          onClick={handleItemClick}
-          as={NavLink}
-          to="/"
-        />
-        <Menu.Item
-          style={{ ...makeWhiteText }}
-          name="about"
-          active={activeItem === "about"}
-          onClick={handleItemClick}
-          as={NavLink}
-          to="/about"
-        />
-        <Menu.Item
-          style={{ ...makeWhiteText }}
-          name="contact us"
-          active={activeItem === "contact us"}
-          onClick={handleItemClick}
-          as={NavLink}
-          to="/contactus"
-        />
-        <Menu.Item
-          style={{ ...makeWhiteText }}
-          name="signout"
-          active={activeItem === "signout"}
-          onClick={handleItemClick}
-          as={NavLink}
-          to="/signout"
-        />
+          <Menu.Menu position="right">
+            <Menu.Item
+              style={{ ...makeWhiteText }}
+              name="dashboard"
+              active={activeItem === "dashboard"}
+              onClick={handleItemClick}
+              as={NavLink}
+              to="/dashboard"
+            />
 
-        <Menu.Menu position="right">
+            <Menu.Item>
+              <Input icon="search" placeholder="Search..." />
+            </Menu.Item>
+            <Menu.Item
+              style={{ ...makeWhiteText }}
+              name="signout"
+              onClick={signout}
+              as={NavLink}
+              to="/signin"
+            />
+          </Menu.Menu>
+        </Menu>
+      </Sticky>
+    );
+  }
+  /**/
+  function NavBarWithoutAuth() {
+    return (
+      <Sticky>
+        <Menu
+          pointing
+          secondary
+          stackable
+          style={{
+            background: "#00ced1",
+            color: "white",
+            marginBottom: "20px",
+          }}
+        >
           <Menu.Item
+            name="home"
             style={{ ...makeWhiteText }}
-            name="signin"
-            active={activeItem === "signin"}
+            active={activeItem === "home"}
             onClick={handleItemClick}
             as={NavLink}
-            to="/signin"
+            to="/"
           />
           <Menu.Item
             style={{ ...makeWhiteText }}
-            name="signup"
-            active={activeItem === "signup"}
+            name="about"
+            active={activeItem === "about"}
             onClick={handleItemClick}
             as={NavLink}
-            to="/signup"
+            to="/about"
           />
           <Menu.Item
             style={{ ...makeWhiteText }}
-            name="dashboard"
-            active={activeItem === "dashboard"}
+            name="contact us"
+            active={activeItem === "contact us"}
             onClick={handleItemClick}
             as={NavLink}
-            to="/dashboard"
+            to="/contactus"
           />
-          <Menu.Item>
-            <Input icon="search" placeholder="Search..." />
-          </Menu.Item>
-          {/* {user
-            ? [
-                <Menu.Item
-                  style={{ ...makeWhiteText }}
-                  name="user"
-                  active={activeItem === "user"}
-                  onClick={handleItemClick}
-                  as={NavLink}
-                  to="/user"
-                />,
-              ]
-            : null} */}
-        </Menu.Menu>
-      </Menu>
-    </Sticky>
-  );
+          <Menu.Menu position="right">
+            <Menu.Item
+              style={{ ...makeWhiteText }}
+              name="signin"
+              active={activeItem === "signin"}
+              onClick={handleItemClick}
+              as={NavLink}
+              to="/signin"
+            />
+            <Menu.Item
+              style={{ ...makeWhiteText }}
+              name="signup"
+              active={activeItem === "signup"}
+              onClick={handleItemClick}
+              as={NavLink}
+              to="/signup"
+            />
+            <Menu.Item
+              style={{ ...makeWhiteText }}
+              name="dashboard"
+              active={activeItem === "dashboard"}
+              onClick={handleItemClick}
+              as={NavLink}
+              to="/dashboard"
+            />
+            <Menu.Item>
+              <Input icon="search" placeholder="Search..." />
+            </Menu.Item>
+          </Menu.Menu>
+        </Menu>
+      </Sticky>
+    );
+  }
+  if (user) console.log({ usernameFromNav: user.username });
+  let menuBar = user ? <NavBarWithAuth /> : <NavBarWithoutAuth />;
+  return menuBar;
 };
-
-// function NavBar() {
-//   return (
-//       <Menu.Item>
-//         style={{ ...makeWhiteText }}
-//         name="user" active={activeItem === "user"}
-//         onClick={handleItemClick}
-//         as={NavLink}
-//         to="/user"
-//       </Menu.Item>
-//   )
-// }
 
 // export default NavBar;
 

@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useReducer, useContext } from "react";
 import jwtDecode from "jwt-decode";
 
 const initialState = {
@@ -27,12 +27,12 @@ function authReducer(state, action) {
     case "SIGNIN":
       return {
         ...state,
-        userData: action.payload,
+        user: action.payload,
       };
     case "SIGNOUT":
       return {
         ...state,
-        userData: null,
+        user: null,
       };
 
     default:
@@ -46,6 +46,8 @@ function AuthProvider(props) {
   const signin = (userData) => {
     console.log({ userDataFromAuthProvider: userData });
     localStorage.setItem("authorization", userData.token);
+    // jwtDecode(localStorage.getItem("authorization"));
+    // let userData = jwtDecode(userData);
     dispatch({
       type: "SIGNIN",
       payload: userData,
@@ -63,8 +65,20 @@ function AuthProvider(props) {
     <AuthContext.Provider
       value={{ user: state.user, signin, signout }}
       {...props}
-    />
+    >
+      {props.children}
+    </AuthContext.Provider>
   );
 }
 
-export { AuthContext, AuthProvider };
+const useUserAuthState = () => {
+  const authContext = useContext(AuthContext);
+
+  if (authContext === undefined) {
+    throw new Error("useUserAuthState must be used within a CountProvider");
+  }
+
+  return authContext;
+};
+
+export { AuthContext, AuthProvider, useUserAuthState };

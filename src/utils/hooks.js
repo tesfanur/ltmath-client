@@ -1,5 +1,5 @@
 import { useState } from "react";
-export const useForm = (callback, initialState) => {
+export const useForm = (callback, initialState = {}) => {
   const [userInput, setUserInput] = useState(initialState);
 
   console.log({ callback });
