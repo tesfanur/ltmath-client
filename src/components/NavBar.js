@@ -5,18 +5,9 @@ import { Input, Menu, Sticky } from "semantic-ui-react";
 import { useUserAuthState } from "../context/auth";
 
 const PointingNavBar = () => {
-  // const { user, signout } = useContext(AuthContext);
   const { user, signout } = useUserAuthState();
 
   console.log({ userFromNavBar: user, signout });
-  // useEffect(
-  //   (user) => {
-  //     console.log({ userFromuseffect: user });
-  //     return () => {};
-  //   },
-  //   [user]
-  // );
-  // console.log({ authContextFromNavBar: authContext });
   const location = useLocation();
   const makeWhiteText = { color: "white" };
   const pathname = location.pathname;
@@ -25,6 +16,7 @@ const PointingNavBar = () => {
   console.log({ path });
   const [activeItem, setActiveItem] = useState(path);
   const handleItemClick = (e, { name }) => setActiveItem(name);
+  /*menu bar to be rendered if user is not logged in*/
   function NavBarWithAuth() {
     return (
       <Sticky>
@@ -41,7 +33,6 @@ const PointingNavBar = () => {
           <Menu.Item
             name={`${user.username}`}
             style={{ ...makeWhiteText }}
-            // active={activeItem === "home"}
             as={NavLink}
             to="/"
           />
@@ -87,7 +78,7 @@ const PointingNavBar = () => {
       </Sticky>
     );
   }
-  /**/
+  /*menu bar to be rendered if user is not logged in*/
   function NavBarWithoutAuth() {
     return (
       <Sticky>
@@ -158,11 +149,12 @@ const PointingNavBar = () => {
       </Sticky>
     );
   }
-  if (user) console.log({ usernameFromNav: user.username });
+  if (user)
+    console.log({
+      usernameFromNav: user.username,
+    });
   let menuBar = user ? <NavBarWithAuth /> : <NavBarWithoutAuth />;
   return menuBar;
 };
-
-// export default NavBar;
 
 export default PointingNavBar;
