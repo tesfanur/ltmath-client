@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { Container, Form, Header, Image } from "semantic-ui-react";
 
@@ -7,11 +7,13 @@ import { CustomStyledButton as SubmitButton } from "../styledcomponents/Button";
 import { useMutation, useApolloClient } from "@apollo/react-hooks";
 import SIGNUP_USER from "../../operations/mutation/signup";
 import { useForm } from "../../utils/hooks";
+import { AuthContext } from "../../context/auth";
 
 /**
  *user registration function
  */
 function Signup() {
+  const authContext = useContext(AuthContext);
   const client = useApolloClient();
   const history = useHistory();
   console.log({ client, history });
@@ -29,9 +31,10 @@ function Signup() {
   // the signup mutation hook
   const [signup, { loading, error }] = useMutation(SIGNUP_USER, {
     variables: { signupInput },
-    update(_, result) {
+    update(_, { data: { signin: userData } }) {
       //_ => proxy
-      console.log({ result });
+      console.log({ userData });
+      authContext.signin(userData);
       history.push("/");
     },
     onError(err) {

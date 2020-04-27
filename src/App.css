@@ -45,7 +45,7 @@ nav ul li a.active {
 /* added late */
 .flex-list-item {
   display: flex !important;
-  justify-content: space-between !important;
+  justify-content: space-around !important;
 }
 
 /* to be removed*/
@@ -53,24 +53,27 @@ nav ul li a.active {
   padding: 40px;
 } */
 
-.dashboard > .card {
+.dashboard .card {
   width: 200px !important;
   background: #e5ffb5 !important;
-  color: white !important;
+  color: #04338d !important;
   /* display: flex !important;
   justify-content: space-evenly; */
   /* padding-left: 20px !important; */
 }
-.dashboard > .card:hover {
+.dashboard .card:hover {
   cursor: pointer;
   /* rotate: 2.5deg !important; */
   transform: scale(1.1) !important;
 }
-.dashboard > .card > .header {
-  color: white !important;
+.dashboard .card .header {
+  color: #04338d !important;
+  font-size: 1rem !important;
+  text-align: center;
+  font-family: inherit;
 }
 
-.dashboard > .card .image {
+.dashboard .card .image {
   background: #5ffbf1 !important;
   /* background-image: linear-gradient(
     to left top,

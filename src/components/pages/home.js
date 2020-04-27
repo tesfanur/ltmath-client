@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Container, Header, Image } from "semantic-ui-react";
+import { DashboardMenu } from "../DashboardMenu";
 
 import letMathLogo from "../../img/ltMath.svg";
 const Title = styled.h1`
@@ -22,11 +23,12 @@ function Home() {
         }}
       >
         <Header>
-          <Image src={letMathLogo} style={{ width: "70%", color: "teal" }} />
+          <Image src={letMathLogo} style={{ width: "10%", color: "teal" }} />
           <Header.Subheader>
             Step by step Math Learning | Teaching web tool!
           </Header.Subheader>
         </Header>
+        <DashboardMenu />
       </Container>
     </>
   );

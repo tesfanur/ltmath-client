@@ -3,7 +3,7 @@ import React from "react";
 import { Message, Container, Divider, List, Icon } from "semantic-ui-react";
 import { useQuery } from "@apollo/react-hooks";
 
-import GET_ALL_USERS from "../../operations/query/Users";
+import { GET_ALL_USERS } from "../../operations/query/User";
 
 function Users() {
   // const { userId } = useParams();
@@ -40,6 +40,9 @@ function Users() {
                   }}
                 >
                   <div className="flex-item">{username}</div>
+                  <div className="flex-item">
+                    <Icon name="edit" />
+                  </div>
                   <div className="flex-item">
                     <Icon name="user delete" />
                   </div>

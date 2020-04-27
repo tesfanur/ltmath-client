@@ -3,30 +3,32 @@ import { Header, Container } from "semantic-ui-react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./components/pages/home";
-// import VisibleSidebar from "./components/pages/Sidebar";
 import Users from "./components/pages/Users";
 import User from "./components/pages/User";
 import Topics from "./components/pages/Topics";
+import Subjects from "./components/pages/Subjects";
 import SubTopics from "./components/pages/SubTopics";
 import About from "./components/pages/about";
 import Signin from "./components/pages/Signin";
 import Signup from "./components/pages/Signup";
+import Signout from "./components/pages/Signout";
 import Dashboard from "./components/pages/Dashboard";
 import NavBar from "./components/NavBar";
-// import { AuthContext, AuthProvider } from "./context/auth";
-// import { AuthProvider } from "./context/auth";
+import AuthRoute from "./utils/authRoute";
+import { AuthProvider } from "./context/auth";
+import Contact from "./components/pages/Contact";
 
 //TODO: select option for subject topic and sub topic
 export default function App() {
   // const [auth, setAuth] = useContext(AuthContext);
   return (
     <>
-      {/* <AuthProvider> */}
-      <Router>
-        <NavBar />
-        <AllRoutes />
-      </Router>
-      {/* </AuthProvider> */}
+      <AuthProvider>
+        <Router>
+          <NavBar />
+          <AllRoutes />
+        </Router>
+      </AuthProvider>
     </>
   );
 }
@@ -34,39 +36,19 @@ export default function App() {
 function AllRoutes() {
   return (
     <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/about">
-        <About />
-      </Route>
-      <Route exact path="/users">
-        <Users />
-      </Route>
-      <Route exact path="/users">
-        <Users />
-      </Route>
-      <Route exact path="/users/:userId">
-        <User />
-      </Route>
-      <Route exact path="/topics">
-        <Topics />
-      </Route>
-      <Route exact path="/topics/:topicId">
-        <SubTopics />
-      </Route>
-      <Route exact path="/signin">
-        <Signin />
-      </Route>
-      <Route exact path="/signup">
-        <Signup />
-      </Route>
-      <Route exact path="/dashboard">
-        <Dashboard />
-      </Route>
-      <Route exact path="*">
-        <PageNotFound />
-      </Route>
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/contactus" component={Contact} />
+      <Route path="/users" component={Users} />
+      <Route path="/users/:userId" component={User} />
+      <Route path="/topics" component={Topics} />
+      <Route path="/subjects" component={Subjects} />
+      <Route path="/topics/:topicId" component={SubTopics} />
+      <AuthRoute path="/signup" component={Signup} />
+      <AuthRoute path="/signin" component={Signin} />
+      <Route path="/signout" component={Signout} />
+      <Route path="/dashboard" component={Dashboard} />
+      <Route path="*" component={PageNotFound} />
     </Switch>
   );
 }

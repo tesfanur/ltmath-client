@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { Container, Form, Header, Image } from "semantic-ui-react";
 
@@ -7,6 +7,7 @@ import { CustomStyledButton as SubmitButton } from "../styledcomponents/Button";
 import { useMutation, useApolloClient } from "@apollo/react-hooks";
 import SIGNIN_USER from "../../operations/mutation/signin";
 import { useForm } from "../../utils/hooks";
+import { AuthContext } from "../../context/auth";
 console.log({ SIGNIN_USER });
 
 /**
@@ -14,6 +15,8 @@ console.log({ SIGNIN_USER });
  * @param {*}
  */
 const Signin = () => {
+  const authContext = useContext(AuthContext);
+  console.log({ authContextFromSignin: authContext });
   const client = useApolloClient();
   const history = useHistory();
   //TODO implement how to keep user same among different pages
@@ -32,9 +35,10 @@ const Signin = () => {
     variables: {
       signinInput: { username, password },
     },
-    update(_, result) {
+    update(_, { data: { signin: userData } }) {
       //_ => proxy
-      console.log({ result });
+      console.log({ userData });
+      authContext.signin(userData);
       history.push("/");
     },
     onError(error) {
@@ -96,7 +100,7 @@ const Signin = () => {
       <Form
         onSubmit={(event) => handleSubmit(event, signin)}
         className={loading ? "loading" : ""}
-        fluid
+        fluid={true}
       >
         <Form.Input
           label="Username"

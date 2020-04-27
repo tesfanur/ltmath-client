@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { Input, Menu, Sticky } from "semantic-ui-react";
 
+import { AuthContext } from "../context/auth";
+
 const PointingNavBar = () => {
+  const { user } = useContext(AuthContext);
+  // console.log({ authContextFromNavBar: authContext });
   const location = useLocation();
   const makeWhiteText = { color: "white" };
   const pathname = location.pathname;
@@ -26,7 +30,7 @@ const PointingNavBar = () => {
           active={activeItem === "home"}
           onClick={handleItemClick}
           as={NavLink}
-          to="/home"
+          to="/"
         />
         <Menu.Item
           style={{ ...makeWhiteText }}
@@ -46,11 +50,11 @@ const PointingNavBar = () => {
         />
         <Menu.Item
           style={{ ...makeWhiteText }}
-          name="logout"
-          active={activeItem === "logout"}
+          name="signout"
+          active={activeItem === "signout"}
           onClick={handleItemClick}
           as={NavLink}
-          to="/logout"
+          to="/signout"
         />
 
         <Menu.Menu position="right">
@@ -81,10 +85,36 @@ const PointingNavBar = () => {
           <Menu.Item>
             <Input icon="search" placeholder="Search..." />
           </Menu.Item>
+          {/* {user
+            ? [
+                <Menu.Item
+                  style={{ ...makeWhiteText }}
+                  name="user"
+                  active={activeItem === "user"}
+                  onClick={handleItemClick}
+                  as={NavLink}
+                  to="/user"
+                />,
+              ]
+            : null} */}
         </Menu.Menu>
       </Menu>
     </Sticky>
   );
 };
+
+// function NavBar() {
+//   return (
+//       <Menu.Item>
+//         style={{ ...makeWhiteText }}
+//         name="user" active={activeItem === "user"}
+//         onClick={handleItemClick}
+//         as={NavLink}
+//         to="/user"
+//       </Menu.Item>
+//   )
+// }
+
+// export default NavBar;
 
 export default PointingNavBar;

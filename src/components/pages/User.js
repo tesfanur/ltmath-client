@@ -10,6 +10,8 @@ import {
 } from "semantic-ui-react";
 import { useQuery } from "@apollo/react-hooks";
 
+//person-icon-transparent.png
+import personIcon from "../../img/person-icon-transparent.svg";
 import { GET_USER_BY_ID } from "../../operations/query/User";
 
 function User() {
@@ -41,11 +43,7 @@ function User() {
     <Container style={{ marginTop: "10px", width: "50%" }}>
       <Header>User Profile</Header>
       <Card>
-        <Image
-          src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-          wrapped
-          ui={false}
-        />
+        <Image src={personIcon} wrapped ui={false} />
         <Card.Content>
           <Card.Header>{username}</Card.Header>
           <Card.Meta>

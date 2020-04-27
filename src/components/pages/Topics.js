@@ -1,8 +1,8 @@
 import React from "react";
 import { useQuery, useApolloClient } from "@apollo/react-hooks";
 
-import { Message, Container, List, Divider } from "semantic-ui-react";
-import { GET_ALL_TOPICS } from "../../operations/query/Topics";
+import { Message, Container, List, Divider, Icon } from "semantic-ui-react";
+import { GET_ALL_TOPICS } from "../../operations/query/Topic";
 
 function Topics() {
   const client = useApolloClient();
@@ -34,7 +34,21 @@ function Topics() {
           return (
             <>
               <List.Item key={_id} href={`/topics/${_id}`}>
-                {topic}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "60vw",
+                  }}
+                >
+                  <div className="flex-item">{topic}</div>
+                  <div className="flex-item">
+                    <Icon name="edit" />
+                  </div>
+                  <div className="flex-item">
+                    <Icon name="trash" />
+                  </div>
+                </div>
               </List.Item>
               <Divider />
             </>

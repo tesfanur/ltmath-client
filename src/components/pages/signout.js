@@ -1,24 +1,11 @@
 import React from "react";
-import { ApolloConsumer } from "react-apollo";
-import { withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-//TODO: write the proper code for user signout feature
-//just you need to remove token from your store or session variable and
-//redirect your user to the signin page ...
-const handleSignout = (client, history) => {
-  localStorage.removeItem("token");
-  client.resetStore();
-  history.push("/");
-};
-const signout = ({ history }) => {
-  // eslint-disable-next-line no-unused-expressions
-  <ApolloConsumer>
-    {(client) => {
-      return (
-        <button onClick={() => handleSignout(client, history)}>signout</button>
-      );
-    }}
-  </ApolloConsumer>;
+const Signout = () => {
+  const history = useHistory();
+  localStorage.removeItem("authorization");
+  history.push("/signin");
+  return <h1>Successfully logged out</h1>;
 };
 
-export default withRouter(signout);
+export default Signout;

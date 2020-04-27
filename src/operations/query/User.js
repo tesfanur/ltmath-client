@@ -1,5 +1,16 @@
 import { gql } from "apollo-boost";
 
+export const GET_ALL_USERS = gql`
+  query getAllUsers {
+    users {
+      _id
+      username
+      email
+      usertype
+    }
+  }
+`;
+
 export const GET_USER_BY_ID = gql`
   query getUserByID($userId: ID) {
     getUserByID(userId: $userId) {

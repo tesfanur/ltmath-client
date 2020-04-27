@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 
 import loadingImagePath from "../../img/short-paragraph.png";
@@ -15,7 +15,7 @@ import {
 } from "semantic-ui-react";
 
 import { useQuery, useApolloClient } from "@apollo/react-hooks";
-import { GET_ALL_SUB_TOPICS } from "../../operations/query/Topics";
+import { GET_ALL_SUB_TOPICS } from "../../operations/query/SubTopic";
 
 const LoadingMessage = () => (
   <Container style={{ marginTop: "10px", width: "70%" }}>
